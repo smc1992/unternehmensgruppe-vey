@@ -8,23 +8,32 @@ import App from './App.tsx'
 // Error logging for debugging
 console.log('Starting app with VITE_SITE_URL:', import.meta.env.VITE_SITE_URL);
 
-// Error boundary component
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+// Error boundary component with proper TypeScript types
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+}
+
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: null };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     console.error('Error caught by boundary:', error);
     return { hasError: true, error };
   }
 
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
     console.error('Error boundary caught:', error, errorInfo);
   }
 
-  render() {
+  render(): React.ReactNode {
     if (this.state.hasError) {
       return (
         <div style={{ padding: '20px', textAlign: 'center' }}>
