@@ -1,0 +1,11 @@
+# Static site configuration for Coolify
+# No Docker, no build process - just serve static files
+
+[build]
+  publish = "out"
+  
+[start]
+  command = "npx serve -s out -l 3000"
+
+[variables]
+  NODE_VERSION = "18"
