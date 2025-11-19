@@ -14,4 +14,4 @@ Disallow: /impressum
 Disallow: /datenschutz
 Disallow: /service-funnel
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://unternehmensgruppe-vey.de/sitemap.xml
