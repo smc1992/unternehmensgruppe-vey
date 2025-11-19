@@ -1,6 +1,5 @@
 [phases.setup]
 nixPkgs = ["nodejs_20"]
-cmds = []
 
 [phases.install]
 cmds = ["npm ci"]
@@ -10,8 +9,3 @@ cmds = ["npm run build"]
 
 [start]
 cmd = ["sh", "-c", "npx serve -s out -l 3000 & node server.js"]
-
-[variables]
-NODE_ENV = "production"
-PORT = "3000"
-NPM_CONFIG_PRODUCTION = "false"
