@@ -1,17 +1,18 @@
-# Nixpacks configuration for Coolify
-# Use pre-built files from /out directory - NO SOURCE BUILD
+# Nixpacks configuration for React Frontend + Node.js Backend
+# Build and serve full-stack application
 
 [phases.setup]
 nixPkgs = ["nodejs_20"]
 
 [phases.install]
-cmds = ["npm install -g serve@14.2.4"]
+cmds = ["npm ci"]
 
 [phases.build]
-cmds = ["echo 'Using pre-built files from /out directory - no build needed'"]
+cmds = ["npm run build"]
 
 [start]
-cmd = "serve -s out -l 3000 -n"
+cmd = ["sh", "-c", "npx serve -s out -l 3000 & node server.js"]
 
 [variables]
 NODE_ENV = "production"
+PORT = "3000"
