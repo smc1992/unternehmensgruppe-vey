@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Vey Unternehmensgruppe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .loading { background: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Vey Unternehmensgruppe - Debug-Seite</h1>
+        <p>Diese Seite hilft bei der Diagnose von Problemen mit der Live-Domain.</p>
+        
+        <div id="status" class="status loading">Überprüfe Assets...</div>
+        <div id="assets-status"></div>
+        <div id="env-status"></div>
+        
+        <h2>📋 Checkliste</h2>
+        <ul>
+            <li id="check-html">✅ HTML geladen</li>
+            <li id="check-css">⏳ CSS-Dateien...</li>
+            <li id="check-js">⏳ JavaScript-Dateien...</li>
+            <li id="check-images">⏳ Bilder...</li>
+            <li id="check-fonts">⏳ Schriftarten...</li>
+        </ul>
+        
+        <h2>🌐 Umgebung</h2>
+        <div id="env-info"></div>
+        
+        <h2>🔗 Nützliche Links</h2>
+        <ul>
+            <li><a href="/">Hauptseite</a></li>
+            <li><a href="/brennholz">Brennholz</a></li>
+            <li><a href="/sitemap.xml">Sitemap</a></li>
+            <li><a href="/robots.txt">Robots.txt</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // Asset-Überprüfung
+        const assets = [
+            '/assets/index-TjXRht_U.js',
+            '/assets/index-mXrXT9q6.css',
+            '/fonts/fonts.css',
+            '/images/company-logo.png'
+        ];
+
+        let loadedAssets = 0;
+        const totalAssets = assets.length;
+
+        function updateStatus() {
+            const status = document.getElementById('status');
+            const assetsStatus = document.getElementById('assets-status');
+            
+            if (loadedAssets === totalAssets) {
+                status.className = 'status success';
+                status.textContent = '✅ Alle Assets erfolgreich geladen!';
+                assetsStatus.innerHTML = '<div class="success">Alle Ressourcen sind verfügbar</div>';
+            } else {
+                status.className = 'status loading';
+                status.textContent = `⏳ Lade Assets... (${loadedAssets}/${totalAssets})`;
+            }
+        }
+
+        // Überprüfe jedes Asset
+        assets.forEach(asset => {
+            fetch(asset, { method: 'HEAD' })
+                .then(response => {
+                    const checkId = 'check-' + asset.split('/')[1].split('.')[0];
+                    const checkElement = document.getElementById(checkId) || 
+                                       document.getElementById('check-' + asset.split('/')[0]);
+                    
+                    if (response.ok) {
+                        if (checkElement) {
+                            checkElement.textContent = `✅ ${asset}`;
+                            checkElement.style.color = 'green';
+                        }
+                        loadedAssets++;
+                    } else {
+                        if (checkElement) {
+                            checkElement.textContent = `❌ ${asset} (${response.status})`;
+                            checkElement.style.color = 'red';
+                        }
+                        document.getElementById('assets-status').innerHTML += 
+                            `<div class="error">❌ ${asset} nicht gefunden (Status: ${response.status})</div>`;
+                    }
+                    updateStatus();
+                })
+                .catch(error => {
+                    console.error('Fehler bei', asset, error);
+                    document.getElementById('assets-status').innerHTML += 
+                        `<div class="error">❌ ${asset} - Netzwerkfehler</div>`;
+                    updateStatus();
+                });
+        });
+
+        // Umgebungsinformationen
+        document.getElementById('env-info').innerHTML = `
+            <p><strong>Domain:</strong> ${window.location.origin}</p>
+            <p><strong>Pfad:</strong> ${window.location.pathname}</p>
+            <p><strong>User Agent:</strong> ${navigator.userAgent.substring(0, 50)}...</p>
+            <p><strong>Zeit:</strong> ${new Date().toLocaleString('de-DE')}</p>
+        `;
+
+        // JavaScript-Fehler abfangen
+        window.addEventListener('error', function(e) {
+            console.error('JavaScript-Fehler:', e.error);
+            document.getElementById('assets-status').innerHTML += 
+                `<div class="error">❌ JavaScript-Fehler: ${e.message}</div>`;
+        });
+
+        // Console-Logging
+        console.log('Debug-Seite geladen für:', window.location.origin);
+        console.log('Zu überprüfende Assets:', assets);
+    </script>
+</body>
+</html>

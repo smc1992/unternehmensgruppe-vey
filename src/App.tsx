@@ -5,7 +5,7 @@ import CookieBanner from './components/feature/CookieBanner';
 
 function App() {
   return (
-    <BrowserRouter basename={__BASE_PATH__}>
+    <BrowserRouter basename="/">
       <AppRoutes />
       <CookieBanner />
     </BrowserRouter>
