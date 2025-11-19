@@ -3,13 +3,15 @@ import react from '@vitejs/plugin-react-swc'
 import { resolve } from 'node:path'
 import AutoImport from 'unplugin-auto-import/vite'
 
-const base = process.env.BASE_PATH || '/'
-const isPreview = process.env.IS_PREVIEW  ? true : false;
+// Use base path '/' for production (Coolify compatible)
+const base = process.env.NODE_ENV === 'production' ? '/' : '/';
+const isPreview = process.env.IS_PREVIEW ? true : false;
+
 // https://vite.dev/config/
 export default defineConfig({
   define: {
-   __BASE_PATH__: JSON.stringify(base),
-   __IS_PREVIEW__: JSON.stringify(isPreview)
+    __BASE_PATH__: JSON.stringify(base),
+    __IS_PREVIEW__: JSON.stringify(isPreview)
   },
   plugins: [react(),
     AutoImport({
@@ -65,10 +67,20 @@ export default defineConfig({
       dts: true,
     }),
   ],
-  base,
+  base: base,
   build: {
     sourcemap: true,
     outDir: 'out',
+    // Ensure assets are in predictable paths for Coolify
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        // Ensure consistent file names for caching
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
+      }
+    }
   },
   resolve: {
     alias: {
