@@ -1,18 +1,17 @@
 # Nixpacks configuration for Coolify
-# Proper build configuration for React + Vite app
+# Use pre-built files from /out directory - NO SOURCE BUILD
 
 [phases.setup]
-nixPkgs = ["nodejs_20", "npm"]
+nixPkgs = ["nodejs_20"]
 
 [phases.install]
-cmds = ["npm ci"]
+cmds = ["npm install -g serve@14.2.4"]
 
 [phases.build]
-cmds = ["npm run build"]
+cmds = ["echo 'Using pre-built files from /out directory - no build needed'"]
 
 [start]
-cmd = "npx serve -s out -l 3000"
+cmd = "serve -s out -l 3000 -n"
 
 [variables]
 NODE_ENV = "production"
-VITE_SITE_URL = "https://unternehmensgruppe-vey.de"
