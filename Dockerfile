@@ -7,6 +7,9 @@ RUN npm ci
 
 COPY . .
 
+# Use docker-specific index.html for build
+RUN cp index.docker.html index.html
+
 RUN npm run build
 
 FROM node:20-alpine AS runner
