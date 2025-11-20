@@ -13,7 +13,3 @@ cmd = "sh -c 'npx serve -s out -l 3000 & node server.js'"
 [variables]
 NODE_ENV = "production"
 PORT = "3000"
-
-# Explicitly force Node.js detection
-[phases.detect]
-provider = "nodejs"
