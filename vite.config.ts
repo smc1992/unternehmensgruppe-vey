@@ -74,6 +74,10 @@ export default defineConfig({
     // Ensure assets are in predictable paths for Coolify
     assetsDir: 'assets',
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        app: resolve(__dirname, 'src/main.tsx')
+      },
       output: {
         // Ensure consistent file names for caching
         entryFileNames: 'assets/[name]-[hash].js',
