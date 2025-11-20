@@ -13,6 +13,7 @@ export default defineConfig({
     __BASE_PATH__: JSON.stringify(base),
     __IS_PREVIEW__: JSON.stringify(isPreview)
   },
+  publicDir: 'public',
   plugins: [react(),
     AutoImport({
       imports: [
