@@ -1,0 +1,18 @@
+{
+    email info@unternehmensgruppe-vey.de
+    auto_https off
+    
+    :3000 {
+        handle {
+            root * /app/out
+            file_server
+            try_files {path} /index.html
+        }
+    }
+    
+    :3001 {
+        handle {
+            reverse_proxy localhost:3001
+        }
+    }
+}
