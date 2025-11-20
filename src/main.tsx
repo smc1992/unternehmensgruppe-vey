@@ -3,7 +3,7 @@ import React from 'react'
 import '@/i18n'
 import { createRoot } from 'react-dom/client'
 import '@/index.css'
-import App from '@/App.tsx'
+import App from '@/App'
 
 // Error logging for debugging
 console.log('Starting app with VITE_SITE_URL:', import.meta.env.VITE_SITE_URL);
