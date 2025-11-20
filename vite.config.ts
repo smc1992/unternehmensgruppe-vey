@@ -7,7 +7,10 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    rollupOptions: {
+      input: path.resolve(__dirname, 'index.html')
+    }
   },
   resolve: {
     alias: {
