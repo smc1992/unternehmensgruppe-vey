@@ -1,0 +1,4 @@
+# SPA routing fallback for Coolify and other platforms
+# All requests should be served to index.html for client-side routing
+
+/*    /index.html   200
