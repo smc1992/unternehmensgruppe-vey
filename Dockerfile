@@ -10,8 +10,6 @@ COPY package*.json ./
 
 RUN npm ci
 
-RUN chmod -R 755 /app
-
 RUN npm run build
 
 EXPOSE 3000
