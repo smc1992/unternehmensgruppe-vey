@@ -6,7 +6,13 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    rollupOptions: {
+      input: {
+        main: './index.html',
+        app: './src/main.tsx'
+      }
+    }
   },
   server: {
     fs: {
