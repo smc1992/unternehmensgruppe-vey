@@ -10,6 +10,9 @@ COPY package*.json ./
 
 RUN npm ci
 
+# Copy Docker-specific index.html without script tag
+RUN cp index.docker.html index.html
+
 RUN npm run build
 
 EXPOSE 3000
