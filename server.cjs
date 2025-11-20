@@ -3,10 +3,22 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
+
+// Health check for Coolify (must be before static middleware)
+app.get('/', (req, res) => {
+  res.json({ status: 'healthy', timestamp: new Date().toISOString() });
+});
+
+// Health check
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+// Static files (after API routes)
 app.use(express.static(path.join(__dirname, 'out')));
 
 // Contact endpoint
@@ -47,11 +59,6 @@ ${message}
     console.error('Email error:', error);
     res.status(500).json({ error: 'Fehler beim Senden der E-Mail' });
   }
-});
-
-// Health check
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
 // Start server

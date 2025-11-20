@@ -17,4 +17,4 @@ RUN npm run build
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "serve -s out -l 3000 & node server.js"]
+CMD ["sh", "-c", "serve -s out -l 3001 & node server.cjs"]
