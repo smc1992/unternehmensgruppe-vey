@@ -788,7 +788,6 @@ export default function HomePage() {
               <div className="flex space-x-6 text-sm">
                 <a href="/impressum" className="text-gray-300 hover:text-white transition-colors">Impressum</a>
                 <a href="/datenschutz" className="text-gray-300 hover:text-white transition-colors">Datenschutz</a>
-                <a href="https://readdy.ai/?origin=logo" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">Website Builder</a>
               </div>
             </div>
           </ScrollAnimation>
