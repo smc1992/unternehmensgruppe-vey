@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 // Serve static files (React app) FIRST
-app.use(express.static(path.join(__dirname, 'out')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // Health check for Coolify (API route)
 app.get('/health', (req, res) => {

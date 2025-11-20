@@ -1,9 +1,9 @@
 import { StrictMode } from 'react'
 import React from 'react'
-import './i18n'
+import '@/i18n'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import '@/index.css'
+import App from '@/App.tsx'
 
 // Error logging for debugging
 console.log('Starting app with VITE_SITE_URL:', import.meta.env.VITE_SITE_URL);
