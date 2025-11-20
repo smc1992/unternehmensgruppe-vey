@@ -8,4 +8,4 @@ cmds = ["npm ci"]
 cmds = ["npm run build"]
 
 [start]
-cmd = ["sh", "-c", "npx serve -s out -l 3000 & node server.js"]
+cmd = "sh -c 'npx serve -s out -l 3000 & node server.js'"
