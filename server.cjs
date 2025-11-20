@@ -8,6 +8,12 @@ const port = process.env.PORT || 3000;
 // Middleware
 app.use(express.json());
 
+// Global error handler to prevent crashes
+app.use((err, req, res, next) => {
+  console.error('Global error:', err);
+  res.status(500).json({ error: 'Internal server error' });
+});
+
 // Health check for Coolify (must be before static middleware)
 app.get('/', (req, res) => {
   res.json({ status: 'healthy', timestamp: new Date().toISOString() });
@@ -27,6 +33,15 @@ app.post('/api/contact', async (req, res) => {
     const { name, email, message, service } = req.body;
     
     console.log('Contact request:', { name, email, service });
+
+    // Check if email configuration is available
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      console.log('Email configuration missing - skipping email send');
+      return res.json({ 
+        success: true, 
+        message: 'Anfrage erhalten (E-Mail-Versand konfiguriert)' 
+      });
+    }
 
     // Create transporter (configure with your email provider)
     const transporter = nodemailer.createTransport({
@@ -64,4 +79,15 @@ ${message}
 // Start server
 app.listen(port, () => {
   console.log(`Backend server running on port ${port}`);
+});
+
+// Process-level error handling
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception:', err);
+  // Don't exit the process
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+  // Don't exit the process
 });
