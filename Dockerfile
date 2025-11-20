@@ -13,7 +13,9 @@ FROM node:20-alpine AS runner
 
 WORKDIR /app
 
-RUN npm install -g serve@14.2.4
+# Copy package.json and install production dependencies
+COPY package*.json ./
+RUN npm ci --only=production
 
 COPY --from=builder /app/dist ./dist
 COPY app.cjs ./
