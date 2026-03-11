@@ -20,12 +20,27 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
+// Debug endpoint to check env vars (no secrets)
+app.get('/api/debug', (req, res) => {
+  res.json({
+    smtp_host: process.env.SMTP_HOST || 'NOT SET (using default)',
+    smtp_port: process.env.SMTP_PORT || 'NOT SET (using 465)',
+    email_user: process.env.EMAIL_USER ? 'SET' : 'NOT SET',
+    email_pass: process.env.EMAIL_PASS ? 'SET (' + process.env.EMAIL_PASS.length + ' chars)' : 'NOT SET',
+    node_env: process.env.NODE_ENV || 'not set',
+    timestamp: new Date().toISOString()
+  });
+});
+
 // SMTP Transporter (reusable)
 function createTransporter() {
   return nodemailer.createTransport({
     host: process.env.SMTP_HOST || 'w014bcc1.kasserver.com',
     port: parseInt(process.env.SMTP_PORT || '465'),
     secure: true,
+    connectionTimeout: 10000,
+    greetingTimeout: 10000,
+    socketTimeout: 10000,
     auth: {
       user: process.env.EMAIL_USER || 'info@unternehmensgruppe-vey.de',
       pass: process.env.EMAIL_PASS,
