@@ -27,6 +27,19 @@ app.get('/api/health', (req, res) => {
 // Static files (after API routes)
 app.use(express.static(path.join(__dirname, 'out')));
 
+// SMTP Transporter (reusable)
+function createTransporter() {
+  return nodemailer.createTransport({
+    host: process.env.SMTP_HOST || 'w01a6b04.kasserver.com',
+    port: parseInt(process.env.SMTP_PORT || '465'),
+    secure: true,
+    auth: {
+      user: process.env.EMAIL_USER || 'info@unternehmensgruppe-vey.de',
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+}
+
 // Contact endpoint
 app.post('/api/contact', async (req, res) => {
   try {
@@ -34,45 +47,70 @@ app.post('/api/contact', async (req, res) => {
     
     console.log('Contact request:', { name, email, service });
 
-    // Check if email configuration is available
-    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-      console.log('Email configuration missing - skipping email send');
+    if (!process.env.EMAIL_PASS) {
+      console.log('EMAIL_PASS missing - skipping email send');
       return res.json({ 
         success: true, 
-        message: 'Anfrage erhalten (E-Mail-Versand konfiguriert)' 
+        message: 'Anfrage erhalten (E-Mail-Konfiguration fehlt)' 
       });
     }
 
-    // Create transporter (configure with your email provider)
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.gmail.com',
-      port: process.env.SMTP_PORT || 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+    const transporter = createTransporter();
 
-    // Send email
     await transporter.sendMail({
-      from: email,
+      from: `"Vey Webseite" <${process.env.EMAIL_USER || 'info@unternehmensgruppe-vey.de'}>`,
+      replyTo: email,
       to: 'info@unternehmensgruppe-vey.de',
       subject: `Kontaktanfrage von ${name} - ${service || 'Allgemein'}`,
-      text: `
-Name: ${name}
-E-Mail: ${email}
-Service: ${service || 'Allgemein'}
-
-Nachricht:
-${message}
-      `,
+      text: `Name: ${name}\nE-Mail: ${email}\nService: ${service || 'Allgemein'}\n\nNachricht:\n${message}`,
     });
 
     res.json({ success: true, message: 'E-Mail erfolgreich gesendet' });
   } catch (error) {
     console.error('Email error:', error);
     res.status(500).json({ error: 'Fehler beim Senden der E-Mail' });
+  }
+});
+
+// Funnel endpoint
+app.post('/api/funnel', async (req, res) => {
+  try {
+    const { name, email, phone, service, projectType, urgency, budget, location, message } = req.body;
+    
+    console.log('Funnel request:', { name, email, phone, service });
+
+    if (!process.env.EMAIL_PASS) {
+      console.log('EMAIL_PASS missing - skipping email send');
+      return res.json({ success: true, message: 'Anfrage erhalten' });
+    }
+
+    const transporter = createTransporter();
+
+    const emailText = [
+      `=== NEUE ANFRAGE ÜBER DEN SERVICE-FUNNEL ===\n`,
+      `Name: ${name}`,
+      `E-Mail: ${email}`,
+      `Telefon: ${phone}`,
+      `Dienstleistung: ${service}`,
+      `Projekttyp: ${projectType}`,
+      `Dringlichkeit: ${urgency}`,
+      `Budget: ${budget}`,
+      location ? `Standort/PLZ: ${location}` : '',
+      message ? `\nNachricht:\n${message}` : '',
+    ].filter(Boolean).join('\n');
+
+    await transporter.sendMail({
+      from: `"Vey Webseite" <${process.env.EMAIL_USER || 'info@unternehmensgruppe-vey.de'}>`,
+      replyTo: email,
+      to: 'info@unternehmensgruppe-vey.de',
+      subject: `Service-Anfrage: ${service} - ${name}`,
+      text: emailText,
+    });
+
+    res.json({ success: true, message: 'Anfrage erfolgreich gesendet' });
+  } catch (error) {
+    console.error('Funnel email error:', error);
+    res.status(500).json({ error: 'Fehler beim Senden der Anfrage' });
   }
 });
 

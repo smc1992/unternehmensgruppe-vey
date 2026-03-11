@@ -101,7 +101,7 @@ export default function ImpressumPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Kontakt</h2>
             <p className="text-gray-700 leading-relaxed">
               <strong>Telefon:</strong> +49 176 71085234<br />
-              <strong>E-Mail:</strong> <a href="mailto:info@brennholz-koenig.de" className="text-orange-600 hover:text-orange-700">info@brennholz-koenig.de</a>
+              <strong>E-Mail:</strong> <a href="mailto:info@unternehmensgruppe-vey.de" className="text-orange-600 hover:text-orange-700">info@unternehmensgruppe-vey.de</a>
             </p>
           </section>
 
@@ -189,7 +189,7 @@ export default function ImpressumPage() {
                 <a href="tel:+4917671085234" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-phone-line"></i>
                 </a>
-                <a href="mailto:info@vey-unternehmensgruppe.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
+                <a href="mailto:info@unternehmensgruppe-vey.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-mail-line"></i>
                 </a>
               </div>
@@ -233,7 +233,7 @@ export default function ImpressumPage() {
                 <p>36419 Buttlar</p>
                 <p>Deutschland</p>
                 <p>+49 176 71085234</p>
-                <p>info@vey-unternehmensgruppe.de</p>
+                <p>info@unternehmensgruppe-vey.de</p>
               </div>
             </div>
           </div>

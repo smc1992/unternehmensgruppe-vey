@@ -154,7 +154,7 @@ export default function DatenschutzPage() {
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
               Telefon: +49 176 71085234<br />
-              E-Mail: info@brennholz-koenig.de
+              E-Mail: info@unternehmensgruppe-vey.de
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
               Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
@@ -249,7 +249,7 @@ export default function DatenschutzPage() {
                 <a href="tel:+4917671085234" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-phone-line"></i>
                 </a>
-                <a href="mailto:info@vey-unternehmensgruppe.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
+                <a href="mailto:info@unternehmensgruppe-vey.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-mail-line"></i>
                 </a>
               </div>
@@ -293,7 +293,7 @@ export default function DatenschutzPage() {
                 <p>36419 Buttlar</p>
                 <p>Deutschland</p>
                 <p>+49 176 71085234</p>
-                <p>info@vey-unternehmensgruppe.de</p>
+                <p>info@unternehmensgruppe-vey.de</p>
               </div>
             </div>
           </div>

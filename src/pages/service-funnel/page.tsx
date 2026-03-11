@@ -118,21 +118,27 @@ const ServiceFunnelPage = () => {
     setIsSubmitting(true);
     
     try {
-      const formData = {
-        service: selectedService,
-        projectType,
-        urgency,
-        budget,
-        location,
-        ...contactInfo
-      };
+      const serviceName = services.find(s => s.id === selectedService)?.name || selectedService;
 
-      const response = await fetch('https://readdy.ai/api/form/d4b1v1crg8gnguu9580g', {
+      const response = await fetch('/api/funnel', {
         method: 'POST',
-        body: new URLSearchParams(formData as any)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: contactInfo.name,
+          email: contactInfo.email,
+          phone: contactInfo.phone,
+          service: serviceName,
+          projectType,
+          urgency,
+          budget,
+          location,
+          message: contactInfo.message
+        })
       });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (response.ok && data.success) {
         setSubmitStatus('success');
         setCurrentStep(6);
       } else {
@@ -228,7 +234,7 @@ const ServiceFunnelPage = () => {
                 {services.map((service) => (
                   <div
                     key={service.id}
-                    onClick={() => setSelectedService(service.id)}
+                    onClick={() => { setSelectedService(service.id); setTimeout(() => { setCurrentStep(2); window.scrollTo({ top: 0, behavior: 'smooth' }); }, 300); }}
                     className={`p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 hover:shadow-lg ${
                       selectedService === service.id
                         ? 'border-orange-600 bg-orange-50 shadow-lg'
@@ -264,7 +270,7 @@ const ServiceFunnelPage = () => {
                 {projectTypes[selectedService as keyof typeof projectTypes]?.map((type) => (
                   <div
                     key={type}
-                    onClick={() => setProjectType(type)}
+                    onClick={() => { setProjectType(type); setTimeout(() => { setCurrentStep(3); window.scrollTo({ top: 0, behavior: 'smooth' }); }, 300); }}
                     className={`p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 hover:shadow-lg ${
                       projectType === type
                         ? 'border-orange-600 bg-orange-50 shadow-lg'
@@ -297,7 +303,7 @@ const ServiceFunnelPage = () => {
                 ].map((option) => (
                   <div
                     key={option.id}
-                    onClick={() => setUrgency(option.id)}
+                    onClick={() => { setUrgency(option.id); setTimeout(() => { setCurrentStep(4); window.scrollTo({ top: 0, behavior: 'smooth' }); }, 300); }}
                     className={`p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 hover:shadow-lg ${
                       urgency === option.id
                         ? 'border-orange-600 bg-orange-50 shadow-lg'
@@ -333,7 +339,7 @@ const ServiceFunnelPage = () => {
                 ].map((option) => (
                   <div
                     key={option.id}
-                    onClick={() => setBudget(option.id)}
+                    onClick={() => { setBudget(option.id); setTimeout(() => { setCurrentStep(5); window.scrollTo({ top: 0, behavior: 'smooth' }); }, 300); }}
                     className={`p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 hover:shadow-lg ${
                       budget === option.id
                         ? 'border-orange-600 bg-orange-50 shadow-lg'
@@ -478,19 +484,13 @@ const ServiceFunnelPage = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Link
                   to="/"
                   className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
                 >
                   Zurück zur Startseite
                 </Link>
-                <a
-                  href="tel:+4917671085234"
-                  className="bg-gray-100 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors whitespace-nowrap cursor-pointer"
-                >
-                  Direkt anrufen
-                </a>
               </div>
             </div>
           )}

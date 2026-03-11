@@ -8,6 +8,11 @@ export default defineConfig({
   build: {
     outDir: 'dist'
   },
+  server: {
+    proxy: {
+      '/api': 'http://localhost:3001'
+    }
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')

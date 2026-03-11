@@ -40,7 +40,7 @@ export default function UmzuegePage() {
         "@type": "LocalBusiness",
         "name": "Vey Unternehmensgruppe",
         "telephone": "+4917671085234",
-        "email": "info@vey-unternehmensgruppe.de",
+        "email": "info@unternehmensgruppe-vey.de",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Frankfurter Straße 3",
@@ -438,8 +438,8 @@ export default function UmzuegePage() {
                     icon: "ri-mail-line",
                     title: "E-Mail",
                     description: "Schreiben Sie uns Ihre Anfrage",
-                    contact: "info@vey-unternehmensgruppe.de",
-                    href: "mailto:info@vey-unternehmensgruppe.de"
+                    contact: "info@unternehmensgruppe-vey.de",
+                    href: "mailto:info@unternehmensgruppe-vey.de"
                   },
                   {
                     icon: "ri-map-pin-line",
@@ -509,7 +509,7 @@ export default function UmzuegePage() {
                 <a href="tel:+4917671085234" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-phone-line"></i>
                 </a>
-                <a href="mailto:info@vey-unternehmensgruppe.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
+                <a href="mailto:info@unternehmensgruppe-vey.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-mail-line"></i>
                 </a>
               </div>
@@ -552,7 +552,7 @@ export default function UmzuegePage() {
                 <p>36419 Buttlar</p>
                 <p>Deutschland</p>
                 <p>+49 176 71085234</p>
-                <p>info@vey-unternehmensgruppe.de</p>
+                <p>info@unternehmensgruppe-vey.de</p>
               </div>
             </div>
           </div>

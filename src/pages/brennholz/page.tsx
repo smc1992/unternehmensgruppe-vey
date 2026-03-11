@@ -40,7 +40,7 @@ export default function BrennholzPage() {
         "@type": "LocalBusiness",
         "name": "Vey Unternehmensgruppe",
         "telephone": "+4917671085234",
-        "email": "info@vey-unternehmensgruppe.de",
+        "email": "info@brennholz-koenig.de",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Frankfurter Straße 3",
@@ -643,19 +643,19 @@ export default function BrennholzPage() {
                     <div className="min-w-0 flex-1">
                       <h4 className="font-bold text-red-800 mb-1 text-xs sm:text-sm lg:text-base leading-tight">Spontan-Käufer</h4>
                       <p className="text-xs sm:text-sm text-red-700 leading-relaxed">
-                        Sie brauchen Holz sofort heute – wir liefern nach Terminvereinbarung
+                        Sie brauchen Holz sofort heute? Wir liefern nach Terminvereinbarung. Mittels Express Lieferung maximal bis 48h.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start bg-white rounded-lg p-2 sm:p-3 lg:p-4 shadow-sm">
                     <div className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 flex items-center justify-center bg-red-500 rounded-full mr-2 sm:mr-3 lg:mr-4 flex-shrink-0 mt-0.5">
-                      <i className="ri-truck-line text-white text-xs sm:text-sm lg:text-base"></i>
+                      <i className="ri-stack-line text-white text-xs sm:text-sm lg:text-base"></i>
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h4 className="font-bold text-red-800 mb-1 text-xs sm:text-sm lg:text-base leading-tight">Selbstabholer</h4>
+                      <h4 className="font-bold text-red-800 mb-1 text-xs sm:text-sm lg:text-base leading-tight">Kleinmengen-Bedarf</h4>
                       <p className="text-xs sm:text-sm text-red-700 leading-relaxed">
-                        Sie möchten das Holz selbst abholen – wir bieten nur Lieferservice
+                        Wir liefern ab 3 SRM und weniger können Sie auch nicht bestellen. Ab 7 SRM profitieren Sie von günstigeren Preisen.
                       </p>
                     </div>
                   </div>
@@ -827,7 +827,7 @@ export default function BrennholzPage() {
                 <a href="tel:+4917671085234" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-phone-line"></i>
                 </a>
-                <a href="mailto:info@vey-unternehmensgruppe.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
+                <a href="mailto:info@brennholz-koenig.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-mail-line"></i>
                 </a>
               </div>
@@ -870,7 +870,7 @@ export default function BrennholzPage() {
                 <p>36419 Buttlar</p>
                 <p>Deutschland</p>
                 <p>+49 176 71085234</p>
-                <p>info@vey-unternehmensgruppe.de</p>
+                <p>info@brennholz-koenig.de</p>
               </div>
             </div>
           </div>

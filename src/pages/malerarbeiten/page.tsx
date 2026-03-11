@@ -366,7 +366,7 @@ export default function MalerarbeitenPage() {
               </h2>
               <p className="text-xl mb-8 leading-relaxed">
                 Kontaktieren Sie uns für eine kostenlose Beratung und einen unverbindlichen Kostenvoranschlag. 
-                Wir sind Ihr zuverlässiger Partner für alle Malerarbeiten in Buttlar und Umgebung.
+                Wir sind Ihr zuverlässiger Partner für alle Malerarbeiten in der Rhön und im Wartburgkreis.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.a 
@@ -410,7 +410,7 @@ export default function MalerarbeitenPage() {
                 <a href="tel:+4917671085234" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-phone-line"></i>
                 </a>
-                <a href="mailto:info@vey-unternehmensgruppe.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
+                <a href="mailto:info@unternehmensgruppe-vey.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-mail-line"></i>
                 </a>
               </div>
@@ -453,7 +453,7 @@ export default function MalerarbeitenPage() {
                 <p>36419 Buttlar</p>
                 <p>Deutschland</p>
                 <p>+49 176 71085234</p>
-                <p>info@vey-unternehmensgruppe.de</p>
+                <p>info@unternehmensgruppe-vey.de</p>
               </div>
             </div>
           </div>

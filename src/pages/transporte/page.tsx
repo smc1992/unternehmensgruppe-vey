@@ -40,7 +40,7 @@ export default function TransportePage() {
         "@type": "LocalBusiness",
         "name": "Vey Unternehmensgruppe", 
         "telephone": "+4917671085234",
-        "email": "info@vey-unternehmensgruppe.de",
+        "email": "info@unternehmensgruppe-vey.de",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Frankfurter Straße 3",
@@ -461,7 +461,7 @@ export default function TransportePage() {
                   </motion.a>
                   
                   <motion.a 
-                    href="mailto:info@vey-unternehmensgruppe.de" 
+                    href="mailto:info@unternehmensgruppe-vey.de" 
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center justify-center space-x-3 border-2 border-orange-600 text-orange-600 px-8 py-4 rounded-lg font-bold hover:bg-orange-600 hover:text-white transition-colors whitespace-nowrap cursor-pointer"
@@ -499,7 +499,7 @@ export default function TransportePage() {
                 <a href="tel:+4917671085234" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-phone-line"></i>
                 </a>
-                <a href="mailto:info@vey-unternehmensgruppe.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
+                <a href="mailto:info@unternehmensgruppe-vey.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-mail-line"></i>
                 </a>
               </div>
@@ -542,7 +542,7 @@ export default function TransportePage() {
                 <p>36419 Buttlar</p>
                 <p>Deutschland</p>
                 <p>+49 176 71085234</p>
-                <p>info@vey-unternehmensgruppe.de</p>
+                <p>info@unternehmensgruppe-vey.de</p>
               </div>
             </div>
           </div>

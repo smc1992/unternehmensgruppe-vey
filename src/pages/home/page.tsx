@@ -33,7 +33,7 @@ export default function HomePage() {
       "description": "Professionelle Dienstleistungen: Brennholz, Baumfällarbeiten, Mulcharbeiten, Abbrucharbeiten, Malerarbeiten, Dachdeckerarbeiten und Lagerboxen in Buttlar und Umgebung.",
       "url": `${import.meta.env.VITE_SITE_URL || 'https://example.com'}`,
       "telephone": "+4917671085234",
-      "email": "info@vey-unternehmensgruppe.de",
+      "email": "info@unternehmensgruppe-vey.de",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Frankfurter Straße 3",
@@ -656,8 +656,8 @@ export default function HomePage() {
                     icon: "ri-mail-line",
                     title: "E-Mail",
                     description: "Schreiben Sie uns Ihre Anfrage",
-                    contact: "info@vey-unternehmensgruppe.de",
-                    href: "mailto:info@vey-unternehmensgruppe.de"
+                    contact: "info@unternehmensgruppe-vey.de",
+                    href: "mailto:info@unternehmensgruppe-vey.de"
                   },
                   {
                     icon: "ri-map-pin-line",
@@ -729,7 +729,7 @@ export default function HomePage() {
                   <i className="ri-phone-line"></i>
                 </motion.a>
                 <motion.a 
-                  href="mailto:info@vey-unternehmensgruppe.de" 
+                  href="mailto:info@unternehmensgruppe-vey.de" 
                   whileHover={{ scale: 1.1, rotate: -5 }}
                   className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors"
                 >
@@ -775,7 +775,7 @@ export default function HomePage() {
                 <p>36419 Buttlar</p>
                 <p>Deutschland</p>
                 <p>+49 176 71085234</p>
-                <p>info@vey-unternehmensgruppe.de</p>
+                <p>info@unternehmensgruppe-vey.de</p>
               </div>
             </ScrollAnimation>
           </div>

@@ -122,7 +122,7 @@ export default function MulcharbeitenPage() {
             
             <ScrollAnimation direction="up" delay={0.4}>
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-                Hochwertige <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">Mulcharbeiten</span> in Buttlar
+                Hochwertige <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">Mulcharbeiten</span> in der Rhön & Wartburgkreis
               </h1>
             </ScrollAnimation>
             
@@ -424,7 +424,7 @@ export default function MulcharbeitenPage() {
               </h2>
               <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
                 Kontaktieren Sie uns für ein unverbindliches Angebot und einen kostenlosen Kostenvoranschlag. 
-                Wir sind Ihr zuverlässiger Partner für alle Mulcharbeiten in Buttlar und Umgebung.
+                Wir sind Ihr zuverlässiger Partner für alle Mulcharbeiten in der Rhön und im Wartburgkreis.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.a 
@@ -469,7 +469,7 @@ export default function MulcharbeitenPage() {
                 <a href="tel:+4917671085234" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-phone-line"></i>
                 </a>
-                <a href="mailto:info@vey-unternehmensgruppe.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
+                <a href="mailto:info@unternehmensgruppe-vey.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-mail-line"></i>
                 </a>
               </div>
@@ -512,7 +512,7 @@ export default function MulcharbeitenPage() {
                 <p>36419 Buttlar</p>
                 <p>Deutschland</p>
                 <p>+49 176 71085234</p>
-                <p>info@vey-unternehmensgruppe.de</p>
+                <p>info@unternehmensgruppe-vey.de</p>
               </div>
             </div>
           </div>
