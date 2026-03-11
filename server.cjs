@@ -1,9 +1,10 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const path = require('path');
+require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
@@ -14,23 +15,15 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal server error' });
 });
 
-// Health check for Coolify (must be before static middleware)
-app.get('/', (req, res) => {
-  res.json({ status: 'healthy', timestamp: new Date().toISOString() });
-});
-
-// Health check
+// Health check for Coolify
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// Static files (after API routes)
-app.use(express.static(path.join(__dirname, 'out')));
-
 // SMTP Transporter (reusable)
 function createTransporter() {
   return nodemailer.createTransport({
-    host: process.env.SMTP_HOST || 'w01a6b04.kasserver.com',
+    host: process.env.SMTP_HOST || 'w014bcc1.kasserver.com',
     port: parseInt(process.env.SMTP_PORT || '465'),
     secure: true,
     auth: {
@@ -114,9 +107,17 @@ app.post('/api/funnel', async (req, res) => {
   }
 });
 
+// Static files
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// SPA fallback - serve index.html for all non-API routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
 // Start server
-app.listen(port, () => {
-  console.log(`Backend server running on port ${port}`);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running on port ${port}`);
 });
 
 // Process-level error handling
