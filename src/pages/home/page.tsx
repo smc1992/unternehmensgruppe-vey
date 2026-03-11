@@ -242,7 +242,7 @@ export default function HomePage() {
                 Unsere Dienstleistungen
               </motion.a>
               <motion.a 
-                href="#contact" 
+                href="/service-funnel" 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition-colors whitespace-nowrap"

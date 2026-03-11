@@ -3,7 +3,7 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm ci
+RUN npm ci || npm ci || npm ci
 
 COPY . .
 
@@ -15,7 +15,7 @@ WORKDIR /app
 
 # Copy package.json and install production dependencies
 COPY package*.json ./
-RUN npm ci --only=production
+RUN npm ci --omit=dev || npm ci --omit=dev || npm ci --omit=dev
 
 COPY --from=builder /app/dist ./dist
 COPY server.cjs ./
