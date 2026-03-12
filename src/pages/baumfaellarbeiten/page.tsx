@@ -161,8 +161,9 @@ export default function BaumfaellarbeitenPage() {
           </div>
         </div>
 
-        <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
       </motion.header>
+
+      <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
 
       {/* Hero Section */}
       <section 

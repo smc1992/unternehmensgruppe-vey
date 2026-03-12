@@ -101,8 +101,9 @@ export default function MulcharbeitenPage() {
           </div>
         </div>
 
-        <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
       </motion.header>
+
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
 
       {/* Hero Section */}
       <section 

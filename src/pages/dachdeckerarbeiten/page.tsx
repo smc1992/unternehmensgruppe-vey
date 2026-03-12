@@ -203,8 +203,9 @@ export default function DachdeckerarbeitenPage() {
           </div>
         </div>
 
-        <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
       </header>
+
+      <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
 
       {/* Hero Section */}
       <section 

@@ -195,8 +195,9 @@ export default function MalerarbeitenPage() {
           </div>
         </div>
 
-        <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
       </motion.header>
+
+      <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
 
       {/* Hero Section */}
       <section 

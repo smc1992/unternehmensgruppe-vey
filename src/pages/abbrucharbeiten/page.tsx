@@ -114,8 +114,9 @@ export default function AbbrucharbeitenPage() {
           </div>
         </div>
 
-        <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
       </motion.header>
+
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
 
       {/* Hero Section */}
       <section 

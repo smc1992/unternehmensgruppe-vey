@@ -152,8 +152,9 @@ export default function BrennholzPage() {
           </div>
         </div>
 
-        <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
       </header>
+
+      <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-12 sm:py-16 lg:py-20 xl:py-24">
