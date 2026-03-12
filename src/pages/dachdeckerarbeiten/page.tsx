@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import MobileMenu from '../../components/feature/MobileMenu';
 
 export default function DachdeckerarbeitenPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -202,34 +203,7 @@ export default function DachdeckerarbeitenPage() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-200">
-            <div className="px-4 py-6 space-y-4">
-              <Link to="/" className="block text-gray-700 hover:text-orange-600 font-medium cursor-pointer">
-                Startseite
-              </Link>
-              <a href="/#services" className="block text-gray-700 hover:text-orange-600 font-medium">
-                Dienstleistungen
-              </a>
-              <a href="/#about" className="block text-gray-700 hover:text-orange-600 font-medium">
-                Über uns
-              </a>
-              <a href="/#contact" className="block text-gray-700 hover:text-orange-600 font-medium">
-                Kontakt
-              </a>
-              <a 
-                href="tel:+49123456789" 
-                className="flex items-center space-x-2 bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors w-fit"
-              >
-                <div className="w-5 h-5 flex items-center justify-center">
-                  <i className="ri-phone-line"></i>
-                </div>
-                <span>Jetzt anrufen</span>
-              </a>
-            </div>
-          </div>
-        )}
+        <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
       </header>
 
       {/* Hero Section */}

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import MobileMenu from '../../components/feature/MobileMenu';
 
 export default function DatenschutzPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,25 +61,7 @@ export default function DatenschutzPage() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-200">
-            <div className="px-4 py-6 space-y-4">
-              <Link to="/" className="block text-gray-700 hover:text-orange-600 font-medium">
-                Startseite
-              </Link>
-              <a href="/#services" className="block text-gray-700 hover:text-orange-600 font-medium">
-                Dienstleistungen
-              </a>
-              <a href="/#about" className="block text-gray-700 hover:text-orange-600 font-medium">
-                Über uns
-              </a>
-              <a href="/#contact" className="block text-gray-700 hover:text-orange-600 font-medium">
-                Kontakt
-              </a>
-            </div>
-          </div>
-        )}
+        <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
       </header>
 
       {/* Main Content */}
