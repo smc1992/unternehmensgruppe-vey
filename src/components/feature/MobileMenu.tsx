@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface MobileMenuProps {
@@ -8,6 +8,9 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -21,10 +24,10 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   }, [isOpen]);
 
   const menuItems = [
-    { label: 'Startseite', href: '/', icon: 'ri-home-line' },
-    { label: 'Dienstleistungen', href: '/#services', icon: 'ri-service-line' },
-    { label: 'Über uns', href: '/#about', icon: 'ri-team-line' },
-    { label: 'Kontakt', href: '/#contact', icon: 'ri-phone-line' },
+    { label: 'Startseite', href: '/', hash: '', icon: 'ri-home-line' },
+    { label: 'Dienstleistungen', href: '/', hash: 'services', icon: 'ri-service-line' },
+    { label: 'Über uns', href: '/', hash: 'about', icon: 'ri-team-line' },
+    { label: 'Kontakt', href: '/', hash: 'contact', icon: 'ri-phone-line' },
   ];
 
   const services = [
@@ -37,6 +40,42 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     { label: 'Lagerboxen', href: '/schuettgutboxen', icon: 'ri-archive-line' },
     { label: 'Umzüge', href: '/umzuege', icon: 'ri-truck-line' },
   ];
+
+  const handleMenuClick = (href: string, hash: string) => {
+    onClose();
+
+    const scrollToSection = (sectionId: string) => {
+      if (!sectionId) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+      // Small delay to allow menu close animation and page render
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    };
+
+    if (location.pathname === href) {
+      // Already on the right page, just scroll
+      scrollToSection(hash);
+    } else {
+      // Navigate to the page first, then scroll
+      navigate(href);
+      if (hash) {
+        setTimeout(() => {
+          const element = document.getElementById(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 500);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -85,15 +124,14 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <nav className="space-y-2">
                 {menuItems.map((item, index) => (
                   <motion.div
-                    key={item.href}
+                    key={`${item.href}-${item.hash}`}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 + 0.2 }}
                   >
-                    <Link
-                      to={item.href}
-                      onClick={onClose}
-                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-orange-50 hover:text-orange-600 transition-colors group"
+                    <button
+                      onClick={() => handleMenuClick(item.href, item.hash)}
+                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-orange-50 hover:text-orange-600 transition-colors group w-full text-left"
                     >
                       <div className="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-lg group-hover:bg-orange-100 transition-colors">
                         <i className={`${item.icon} text-gray-600 group-hover:text-orange-600`}></i>
@@ -101,7 +139,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       <span className="font-medium text-gray-800 group-hover:text-orange-600">
                         {item.label}
                       </span>
-                    </Link>
+                    </button>
                   </motion.div>
                 ))}
               </nav>

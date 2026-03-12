@@ -233,7 +233,7 @@ export default function UmzuegePage() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight"
+              className="text-3xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight break-words"
             >
               Professionelle <motion.span 
                 className="text-orange-500"
