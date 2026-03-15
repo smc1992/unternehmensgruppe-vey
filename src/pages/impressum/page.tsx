@@ -160,14 +160,11 @@ export default function ImpressumPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center">
-                  <i className="ri-hammer-line text-white text-lg"></i>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">VEY Unternehmensgruppe</h3>
-                </div>
-              </div>
+              <img 
+                src="/images/company-logo.png"
+                alt="Vey Unternehmensgruppe Logo"
+                className="h-10 w-auto mb-4"
+              />
               <p className="text-gray-300 mb-4">
                 Ihr zuverlässiger Partner für vielseitige Dienstleistungen. 
                 Qualität und Kundenzufriedenheit seit über 15 Jahren.
