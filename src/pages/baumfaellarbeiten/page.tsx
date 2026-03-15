@@ -169,7 +169,7 @@ export default function BaumfaellarbeitenPage() {
       <section 
         className="relative py-20 lg:py-32 overflow-hidden bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/baumfaellung1.jpg')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/baumfaellung1.webp')`
         }}
       >
         <div className="container mx-auto px-4 relative z-10">

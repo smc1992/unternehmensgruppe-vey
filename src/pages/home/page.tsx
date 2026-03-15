@@ -201,7 +201,7 @@ export default function HomePage() {
         id="home" 
         className="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('/images/hero-background.jpg')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('/images/hero-background.webp')`
         }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
@@ -277,7 +277,7 @@ export default function HomePage() {
                   whileHover={{ y: -10, scale: 1.02 }}
                 >
                   <div className="h-48 bg-cover bg-center" style={{
-                    backgroundImage: `url('/images/brennholz1.jpg')`
+                    backgroundImage: `url('/images/brennholz1.webp')`
                   }}></div>
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Brennholz</h3>
@@ -303,7 +303,7 @@ export default function HomePage() {
                   whileHover={{ y: -10, scale: 1.02 }}
                 >
                   <div className="h-48 bg-cover bg-center" style={{
-                    backgroundImage: `url('/images/baumfaellung1.jpg')`
+                    backgroundImage: `url('/images/baumfaellung1.webp')`
                   }}></div>
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Baumfällarbeiten</h3>
@@ -329,7 +329,7 @@ export default function HomePage() {
                   whileHover={{ y: -10, scale: 1.02 }}
                 >
                   <div className="h-48 bg-cover bg-center" style={{
-                    backgroundImage: `url('/images/mulch1.jpg')`
+                    backgroundImage: `url('/images/mulch1.webp')`
                   }}></div>
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Mulcharbeiten</h3>
@@ -355,7 +355,7 @@ export default function HomePage() {
                   whileHover={{ y: -10, scale: 1.02 }}
                 >
                   <div className="h-48 bg-cover bg-center" style={{
-                    backgroundImage: `url('/images/abbruch1.jpg')`
+                    backgroundImage: `url('/images/abbruch1.webp')`
                   }}></div>
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Abbrucharbeiten</h3>
@@ -407,7 +407,7 @@ export default function HomePage() {
                   whileHover={{ y: -10, scale: 1.02 }}
                 >
                   <div className="h-48 bg-cover bg-center" style={{
-                    backgroundImage: `url('/images/dach1.jpg')`
+                    backgroundImage: `url('/images/dach1.webp')`
                   }}></div>
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Dachdeckerarbeiten</h3>
@@ -459,7 +459,7 @@ export default function HomePage() {
                   whileHover={{ y: -10, scale: 1.02 }}
                 >
                   <div className="h-48 bg-cover bg-center" style={{
-                    backgroundImage: `url('/images/umzuege1.jpg')`
+                    backgroundImage: `url('/images/umzuege1.webp')`
                   }}></div>
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Umzüge</h3>
@@ -485,7 +485,7 @@ export default function HomePage() {
                   whileHover={{ y: -10, scale: 1.02 }}
                 >
                   <div className="h-48 bg-cover bg-center" style={{
-                    backgroundImage: `url('/images/transport1.jpg')`
+                    backgroundImage: `url('/images/transport1.webp')`
                   }}></div>
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Transporte</h3>
