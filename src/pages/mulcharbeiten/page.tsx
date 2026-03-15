@@ -77,6 +77,7 @@ export default function MulcharbeitenPage() {
               </motion.a>
               
               <motion.button 
+                aria-label="Menü öffnen"
                 className="lg:hidden flex flex-col space-y-1 cursor-pointer p-2 relative z-50"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 whileTap={{ scale: 0.95 }}
