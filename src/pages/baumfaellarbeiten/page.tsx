@@ -500,11 +500,14 @@ export default function BaumfaellarbeitenPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <img 
-                src="/images/company-logo.png"
-                alt="Vey Unternehmensgruppe Logo"
-                className="h-10 w-auto mb-4"
-              />
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center">
+                  <i className="ri-hammer-line text-white text-lg"></i>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold">VEY Unternehmensgruppe</h3>
+                </div>
+              </div>
               <p className="text-gray-300 mb-4">
                 Ihr zuverlässiger Partner für vielseitige Dienstleistungen. 
                 Qualität und Kundenzufriedenheit seit über 15 Jahren.
@@ -566,8 +569,8 @@ export default function BaumfaellarbeitenPage() {
               © {new Date().getFullYear()} Vey Unternehmensgruppe. Alle Rechte vorbehalten.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="/impressum" className="text-gray-300 hover:text-white transition-colors">Impressum</a>
-              <a href="/datenschutz" className="text-gray-300 hover:text-white transition-colors">Datenschutz</a>
+              <Link to="/impressum" className="text-gray-300 hover:text-white transition-colors">Impressum</Link>
+              <Link to="/datenschutz" className="text-gray-300 hover:text-white transition-colors">Datenschutz</Link>
             </div>
           </div>
         </div>
