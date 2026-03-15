@@ -45,14 +45,12 @@ const ServiceInquiryPage = () => {
     setIsSubmitting(true);
     
     try {
-      const formDataToSend = new FormData();
-      Object.entries(formData).forEach(([key, value]) => {
-        formDataToSend.append(key, value);
-      });
-
-      const response = await fetch('https://readdy.ai/api/form/d4b1v1crg8gnguu9580g', {
+      const response = await fetch('/api/service-inquiry', {
         method: 'POST',
-        body: new URLSearchParams(formData as any)
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
       });
 
       if (response.ok) {

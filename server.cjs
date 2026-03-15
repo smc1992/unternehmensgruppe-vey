@@ -108,6 +108,97 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
+// Service Inquiry endpoint
+app.post('/api/service-inquiry', async (req, res) => {
+  try {
+    const { name, email, phone, service, message, address, urgency } = req.body;
+    
+    console.log('Service Inquiry request:', { name, email, phone, service });
+
+    if (!process.env.EMAIL_PASS) {
+      console.log('EMAIL_PASS missing - skipping email send');
+      return res.json({ success: true, message: 'Anfrage erhalten' });
+    }
+
+    const urgencyLabels = {
+      'low': 'Niedrig - Zeit lassen',
+      'normal': 'Normal - Innerhalb einer Woche',
+      'high': 'Hoch - Innerhalb von 2-3 Tagen',
+      'urgent': 'Dringend - Sofort'
+    };
+
+    const urgencyDisplay = urgencyLabels[urgency] || urgency;
+    const now = new Date().toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+
+    const emailHtml = `<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"></head>
+<body style="margin:0;padding:0;background:#f3f4f6;font-family:Arial,Helvetica,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f3f4f6;padding:32px 16px;">
+    <tr><td align="center">
+      <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+        <tr><td style="background:linear-gradient(135deg,#ea580c,#dc2626);padding:32px 40px;text-align:center;">
+          <h1 style="margin:0;color:#ffffff;font-size:22px;font-weight:700;">🔔 Neue Service-Anfrage</h1>
+          <p style="margin:8px 0 0;color:rgba(255,255,255,0.85);font-size:14px;">Eingegangen am ${now}</p>
+        </td></tr>
+        <tr><td style="padding:28px 40px 0;">
+          <table width="100%" cellpadding="0" cellspacing="0">
+            <tr><td style="background:#fff7ed;border:2px solid #fed7aa;border-radius:10px;padding:20px 24px;text-align:center;">
+              <p style="margin:0 0 4px;color:#9a3412;font-size:12px;text-transform:uppercase;letter-spacing:1px;font-weight:600;">Direkte Dienstleistungsanfrage</p>
+              <p style="margin:0;color:#c2410c;font-size:22px;font-weight:700;">${service || 'Allgemein'}</p>
+            </td></tr>
+          </table>
+        </td></tr>
+        <tr><td style="padding:24px 40px 0;">
+          <h2 style="margin:0 0 16px;color:#1f2937;font-size:16px;font-weight:700;border-bottom:2px solid #f3f4f6;padding-bottom:8px;">📋 Auftragsdetails</h2>
+          <table width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;">
+            <tr style="background:#f9fafb;"><td style="padding:10px 8px;color:#6b7280;width:140px;">Dringlichkeit</td><td style="padding:10px 8px;color:#1f2937;font-weight:600;">${urgencyDisplay}</td></tr>
+            ${address ? `<tr><td style="padding:10px 0;color:#6b7280;">Standort</td><td style="padding:10px 0;color:#1f2937;font-weight:600;">${address}</td></tr>` : ''}
+          </table>
+        </td></tr>
+        <tr><td style="padding:24px 40px 0;">
+          <h2 style="margin:0 0 16px;color:#1f2937;font-size:16px;font-weight:700;border-bottom:2px solid #f3f4f6;padding-bottom:8px;">👤 Kontaktdaten</h2>
+          <table width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;">
+            <tr><td style="padding:10px 0;color:#6b7280;width:140px;">Name</td><td style="padding:10px 0;color:#1f2937;font-weight:600;">${name}</td></tr>
+            <tr style="background:#f9fafb;"><td style="padding:10px 8px;color:#6b7280;">E-Mail</td><td style="padding:10px 8px;"><a href="mailto:${email}" style="color:#ea580c;font-weight:600;text-decoration:none;">${email}</a></td></tr>
+            <tr><td style="padding:10px 0;color:#6b7280;">Telefon</td><td style="padding:10px 0;"><a href="tel:${phone}" style="color:#ea580c;font-weight:600;text-decoration:none;">${phone || 'Nicht angegeben'}</a></td></tr>
+          </table>
+        </td></tr>
+        ${message ? `<tr><td style="padding:24px 40px 0;">
+          <h2 style="margin:0 0 12px;color:#1f2937;font-size:16px;font-weight:700;border-bottom:2px solid #f3f4f6;padding-bottom:8px;">💬 Nachricht</h2>
+          <div style="background:#f9fafb;border-radius:8px;padding:16px;color:#374151;font-size:14px;line-height:1.6;border-left:4px solid #ea580c;">${message.replace(/\n/g, '<br>')}</div>
+        </td></tr>` : ''}
+        <tr><td style="padding:28px 40px;text-align:center;">
+          <a href="mailto:${email}?subject=Re: Ihre Anfrage zu ${service}" style="display:inline-block;background:#ea580c;color:#ffffff;padding:14px 32px;border-radius:8px;font-weight:700;font-size:15px;text-decoration:none;">✉️ Dem Kunden antworten</a>
+        </td></tr>
+        <tr><td style="background:#1f2937;padding:20px 40px;text-align:center;">
+          <p style="margin:0;color:#9ca3af;font-size:12px;">Vey Unternehmensgruppe · Frankfurter Straße 3 · 36419 Buttlar</p>
+          <p style="margin:4px 0 0;color:#6b7280;font-size:11px;">Automatisch generiert über unternehmensgruppe-vey.de</p>
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`;
+
+    const emailText = `NEUE SERVICE-ANFRAGE\n\nDienstleistung: ${service}\nDringlichkeit: ${urgencyDisplay}\n${address ? 'Standort: ' + address + '\n' : ''}\nName: ${name}\nE-Mail: ${email}\nTelefon: ${phone || 'Nicht angegeben'}\n${message ? '\nNachricht:\n' + message : ''}`;
+
+    await sendMailWithFallback({
+      from: `"Vey Webseite" <${process.env.EMAIL_USER || 'info@unternehmensgruppe-vey.de'}>`,
+      replyTo: email,
+      to: 'info@unternehmensgruppe-vey.de',
+      subject: `🔔 Service-Anfrage: ${service || 'Allgemein'} – ${name}`,
+      text: emailText,
+      html: emailHtml,
+    });
+
+    res.json({ success: true, message: 'Anfrage erfolgreich gesendet' });
+  } catch (error) {
+    console.error('Service Inquiry email error:', error);
+    res.status(500).json({ error: 'Fehler beim Senden: ' + error.message });
+  }
+});
+
 // Funnel endpoint
 app.post('/api/funnel', async (req, res) => {
   try {
