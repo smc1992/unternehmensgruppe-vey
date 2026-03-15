@@ -34,7 +34,7 @@ export default function SchuettgutboxenPage() {
         "Kein Fundament nötig",
         "Jederzeit erweiterbar"
       ],
-      image: "/images/box-klein.jpg"
+      image: "/images/betonblock-klein.webp"
     },
     {
       title: "Beton-Stapelblock Standard",
@@ -47,7 +47,7 @@ export default function SchuettgutboxenPage() {
         "Perfekt für Schüttgut",
         "Schneller Aufbau"
       ],
-      image: "/images/box-mittel.jpg"
+      image: "/images/betonblock-mittel.webp"
     },
     {
       title: "Schüttgutbox Komplettsystem",
@@ -60,7 +60,7 @@ export default function SchuettgutboxenPage() {
         "Für Gewerbe & Landwirtschaft",
         "Gabelstapler-geeignet"
       ],
-      image: "/images/box-gross.jpg"
+      image: "/images/betonblock-system.webp"
     }
   ];
 
@@ -147,7 +147,7 @@ export default function SchuettgutboxenPage() {
       <section 
         className="relative min-h-[70vh] flex items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('/images/abbruch1.jpg')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('/images/hero-schuettgut-2.webp')`
         }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
