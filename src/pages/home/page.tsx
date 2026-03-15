@@ -733,6 +733,7 @@ export default function HomePage() {
               <div className="flex space-x-4">
                 <motion.a 
                   href="tel:+4917671085234" 
+                  aria-label="Telefonnummer anrufen"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors"
                 >
@@ -740,6 +741,7 @@ export default function HomePage() {
                 </motion.a>
                 <motion.a 
                   href="mailto:info@unternehmensgruppe-vey.de" 
+                  aria-label="E-Mail senden"
                   whileHover={{ scale: 1.1, rotate: -5 }}
                   className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors"
                 >
