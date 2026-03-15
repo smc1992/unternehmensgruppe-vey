@@ -11,16 +11,16 @@ export default function TransportePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
     
-    document.title = "Transporte Buttlar - Vey Unternehmensgruppe | Professionelle Transportdienstleistungen";
+    document.title = "B2B Transporte & Logistik Buttlar | Vey Unternehmensgruppe | Planbare Kapazitäten";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Professionelle Transportdienstleistungen in Buttlar und Umgebung. Möbeltransport, Schwertransport, Kurierdienste und Logistiklösungen von der Vey Unternehmensgruppe. Zuverlässig und termingerecht.');
+      metaDescription.setAttribute('content', 'Kurzfristig verfügbare Transportkapazität für Speditionen, Industrie, Baustoff- und Agrarbetriebe. 18t LKW, Kipper, Planen- und Schubbodenauflieger im Raum Fulda.');
     }
 
     const metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
-      metaKeywords.setAttribute('content', 'Transporte Buttlar, Möbeltransport, Schwertransport, Kurierdienste, Logistiklösungen, Bautransporte, Entsorgungstransporte');
+      metaKeywords.setAttribute('content', 'Transporte Buttlar, Spedition, Schüttgut, Agrar, Baustoffe, Engpassfahrten, Rundlauf');
     }
 
     const canonical = document.querySelector('link[rel="canonical"]');
@@ -73,63 +73,45 @@ export default function TransportePage() {
 
   const services = [
     {
-      title: "Möbeltransport",
-      description: "Sicherer Transport von Möbeln und Einrichtungsgegenständen aller Art.",
+      title: "Schüttgut & Agrar",
+      description: "Zuverlässiger Transport von Getreide, Futtermitteln, Sand, Kies oder Bau-Schüttgütern.",
+      icon: "ri-plant-line",
+      features: ["18t LKW & 27m³ Kipper", "Schubboden-Auflieger", "Recyclingmaterial & Baustoffe"]
+    },
+    {
+      title: "Stückgut & Industrie",
+      description: "Werk- und Lagerfahrten, Palettengut oder Industrie-Transporte. Wir liefern sicher ans Ziel.",
+      icon: "ri-building-line",
+      features: ["Planenauflieger", "Umbaubar als Sattelzugmaschine", "Langhölzer & Sperrgut"]
+    },
+    {
+      title: "Engpass- & Linienfahrten",
+      description: "Kurzfristige Zusatzkapazität für Speditionen, Rundlauf- und Pendelverkehre oder feste Linien.",
       icon: "ri-truck-line",
-      features: ["Professionelle Verpackung", "Versicherungsschutz", "Montage vor Ort"]
-    },
-    {
-      title: "Schwertransport",
-      description: "Spezialtransporte für übergroße und schwere Güter mit entsprechender Ausrüstung.",
-      icon: "ri-roadster-line",
-      features: ["Spezialfahrzeuge", "Genehmigungsservice", "Begleitfahrzeuge"]
-    },
-    {
-      title: "Kurierdienste",
-      description: "Schnelle und zuverlässige Kurierdienste für eilige Sendungen.",
-      icon: "ri-timer-line",
-      features: ["Same-Day-Delivery", "Express-Service", "Nachverfolgung"]
-    },
-    {
-      title: "Logistiklösungen",
-      description: "Komplette Logistiklösungen für Unternehmen und Privatpersonen.",
-      icon: "ri-archive-line",
-      features: ["Lagerung", "Distribution", "Bestandsmanagement"]
-    },
-    {
-      title: "Bautransporte",
-      description: "Transport von Baumaterialien und Baumaschinen zur Baustelle.",
-      icon: "ri-hammer-line",
-      features: ["Kranservice", "Baustellenlogistik", "Materialhandling"]
-    },
-    {
-      title: "Entsorgungstransporte",
-      description: "Fachgerechter Transport und Entsorgung verschiedener Materialien.",
-      icon: "ri-recycle-line",
-      features: ["Sortierung", "Recycling", "Umweltgerecht"]
+      features: ["Rundlauf- & Pendelverkehre", "Linien- & Sonderfahrten", "Zuverlässig & Planbar"]
     }
   ];
 
   const advantages = [
     {
+      icon: "ri-map-pin-line",
+      title: "Einsatzregion & Flexibilität",
+      description: "Standort Fulda/Eiterfeld (120km Radius). Deutschlandweite Tagesfahrten. EU nur mit fest geplanter Rückladung."
+    },
+    {
+      icon: "ri-chat-1-line",
+      title: "Fahrer & Kommunikation",
+      description: "Fahrer sprechen Deutsch (Muttersprache) und kommunikationssicheres Englisch. Russisch, Ukrainisch & Polnisch vorhanden."
+    },
+    {
       icon: "ri-shield-check-line",
-      title: "Vollversichert",
-      description: "Alle Transporte sind vollständig versichert für Ihre Sicherheit."
+      title: "Klare Spielregeln",
+      description: "Planbare Touren statt Zufallsfahrten. Keine Einwegfahrten. Hin- & Rückladung vor Abfahrt immer fixiert."
     },
     {
-      icon: "ri-time-line",
-      title: "Pünktlich",
-      description: "Zuverlässige Einhaltung aller vereinbarten Termine."
-    },
-    {
-      icon: "ri-team-line",
-      title: "Erfahrenes Team",
-      description: "Geschulte Mitarbeiter mit langjähriger Erfahrung."
-    },
-    {
-      icon: "ri-price-tag-line",
-      title: "Faire Preise",
-      description: "Transparente Preisgestaltung ohne versteckte Kosten."
+      icon: "ri-file-list-line",
+      title: "Fahrzeug & Leistung",
+      description: "18t LKW und 27m³ Kipper (umbaubar als reine Sattelzugmaschine). Planen- oder Schubboden-Auflieger möglich."
     }
   ];
 
@@ -241,12 +223,12 @@ export default function TransportePage() {
               transition={{ duration: 1, delay: 0.2 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight"
             >
-              Professionelle <motion.span 
+              Planbare <motion.span 
                 className="text-orange-500"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
-              >Transportlösungen</motion.span>
+              >Transportkapazitäten</motion.span>
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 30 }}
@@ -254,8 +236,8 @@ export default function TransportePage() {
               transition={{ duration: 1, delay: 0.5 }}
               className="text-xl sm:text-2xl mb-8 text-gray-200 leading-relaxed"
             >
-              Von Möbeltransport bis Schwertransport – 
-              Ihre zuverlässigen Partner für alle Transportbedürfnisse
+              Kurzfristig verfügbare Logistik für Speditionen, Industrie, Baustoff- und Agrarbetriebe. 
+              Zuverlässig, planbar und unabhängig vom Spotmarkt.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
@@ -289,11 +271,11 @@ export default function TransportePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimation direction="up" className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-6">
-              Unsere <span className="text-orange-600">Transportdienste</span>
+              Unsere <span className="text-orange-600">Spezialisierung</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Umfassende Transportlösungen für alle Ihre Bedürfnisse. 
-              Von kleinen Paketen bis zu Schwertransporten.
+              Feste Rundläufe und Pendelverkehre statt Spotmarkt-Zufall. Wir bieten 
+              Spezialkapazitäten für Schüttgut, Stückgut, Baustoffe und Agrarprodukte.
             </p>
           </ScrollAnimation>
 
@@ -335,10 +317,11 @@ export default function TransportePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimation direction="up" className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-6">
-              Warum <span className="text-orange-600">unsere Transporte</span>?
+              Klare <span className="text-orange-600">Spielregeln</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Vertrauen Sie auf unsere Erfahrung und Professionalität
+              Für uns stehen Verlässlichkeit, direkte Kommunikation und funktionierende 
+              Planung im Vordergrund. Kein Stehenbleiben im Ausland!
             </p>
           </ScrollAnimation>
 
