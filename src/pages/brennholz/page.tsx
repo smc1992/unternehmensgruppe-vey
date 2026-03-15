@@ -382,7 +382,7 @@ export default function BrennholzPage() {
                 </div>
                 <div className="flex space-x-3">
                   <a 
-                    href="https://brennholz-koenig.de/shop"
+                    href="https://brennholz-koenig.de/shop/industrieholz-buche-klasse-1"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center whitespace-nowrap cursor-pointer"
@@ -428,7 +428,7 @@ export default function BrennholzPage() {
                 </div>
                 <div className="flex space-x-3">
                   <a 
-                    href="https://brennholz-koenig.de/shop"
+                    href="https://brennholz-koenig.de/shop/industrieholz-buche-klasse-2"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center whitespace-nowrap cursor-pointer"
@@ -474,7 +474,7 @@ export default function BrennholzPage() {
                 </div>
                 <div className="flex space-x-3">
                   <a 
-                    href="https://brennholz-koenig.de/shop"
+                    href="https://brennholz-koenig.de/shop/scheitholz-buche-33-cm"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center whitespace-nowrap cursor-pointer"
@@ -518,7 +518,7 @@ export default function BrennholzPage() {
                 </div>
                 <div className="flex space-x-3">
                   <a 
-                    href="https://brennholz-koenig.de/shop"
+                    href="https://brennholz-koenig.de/shop/scheitholz-buche-25-cm"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center whitespace-nowrap cursor-pointer"
@@ -562,7 +562,7 @@ export default function BrennholzPage() {
                 </div>
                 <div className="flex space-x-3">
                   <a 
-                    href="https://brennholz-koenig.de/shop"
+                    href="https://brennholz-koenig.de/shop/scheitholz-fichte-33-cm"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center whitespace-nowrap cursor-pointer"
