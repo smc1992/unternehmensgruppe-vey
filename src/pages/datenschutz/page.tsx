@@ -49,7 +49,7 @@ export default function DatenschutzPage() {
                 <span>Jetzt anrufen</span>
               </a>
               
-              <button 
+              <button aria-label="Menü öffnen" 
                 className="lg:hidden flex flex-col space-y-1 cursor-pointer p-2"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
@@ -241,10 +241,10 @@ export default function DatenschutzPage() {
                 Qualität und Kundenzufriedenheit seit über 15 Jahren.
               </p>
               <div className="flex space-x-4">
-                <a href="tel:+4917671085234" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
+                <a href="tel:+4917671085234" aria-label="Telefonnummer anrufen" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-phone-line"></i>
                 </a>
-                <a href="mailto:info@unternehmensgruppe-vey.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
+                <a href="mailto:info@unternehmensgruppe-vey.de" aria-label="E-Mail senden" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-mail-line"></i>
                 </a>
               </div>
