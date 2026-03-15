@@ -484,6 +484,94 @@ export default function BrennholzPage() {
                 </div>
               </div>
             </div>
+
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+              <div className="relative overflow-hidden">
+                <img 
+                  src="https://brennholz-koenig.de/api/cdn/products/1756684793283-p8i93dnz33.webp" 
+                  alt="Scheitholz Buche 25 cm" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <div className="mb-2">
+                  <span className="inline-block bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium uppercase">Scheitholz</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
+                  Scheitholz Buche 25 cm
+                </h3>
+                <p className="text-gray-600 mb-4 line-clamp-2">
+                  Premium Buchenscheitholz in kompakter 25 cm Länge mit einer Restfeuchte von 16-18%. Speziell für kleinere Öfen und Kamine.
+                </p>
+                <div className="mb-4">
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">25 cm Scheitlänge</span>
+                    <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Premium Buchenholz</span>
+                    <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Für kleinere Öfen</span>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-2xl font-bold text-orange-600">€105.00</span>
+                  </div>
+                  <span className="text-sm text-gray-500">pro Schüttraummeter</span>
+                </div>
+                <div className="flex space-x-3">
+                  <a 
+                    href="https://brennholz-koenig.de/shop"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center whitespace-nowrap cursor-pointer"
+                  >
+                    Details ansehen
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+              <div className="relative overflow-hidden">
+                <img 
+                  src="https://brennholz-koenig.de/api/cdn/products/1756684168611-vj131x8ol8k.webp" 
+                  alt="Scheitholz Fichte 33 cm" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <div className="mb-2">
+                  <span className="inline-block bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium uppercase">Nadelholz</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
+                  Scheitholz Fichte 33 cm
+                </h3>
+                <p className="text-gray-600 mb-4 line-clamp-2">
+                  Hochwertiges Fichtenscheitholz für schnelle Wärme und einfaches Anzünden. Ideal als Anzündholz und für die schnelle Wärme.
+                </p>
+                <div className="mb-4">
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Fichtenholz</span>
+                    <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">33 cm Scheitlänge</span>
+                    <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Schnell brennend</span>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-2xl font-bold text-orange-600">€75.00</span>
+                  </div>
+                  <span className="text-sm text-gray-500">pro Schüttraummeter</span>
+                </div>
+                <div className="flex space-x-3">
+                  <a 
+                    href="https://brennholz-koenig.de/shop"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center whitespace-nowrap cursor-pointer"
+                  >
+                    Details ansehen
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
