@@ -349,7 +349,7 @@ export default function BrennholzPage() {
 
           {/* Produktübersicht */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col h-full">
               <div className="relative overflow-hidden">
                 <img 
                   src="https://brennholz-koenig.de/api/cdn/products/1756333839962-4pzmytgm0sj.png" 
@@ -357,7 +357,7 @@ export default function BrennholzPage() {
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="mb-2">
                   <span className="inline-block bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium">Premium Buche</span>
                 </div>
@@ -374,6 +374,7 @@ export default function BrennholzPage() {
                     <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Kammergetrocknet 6%-8%</span>
                   </div>
                 </div>
+                <div className="mt-auto">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2">
                     <span className="text-2xl font-bold text-orange-600">€115.00</span>
@@ -390,10 +391,11 @@ export default function BrennholzPage() {
                     Details ansehen
                   </a>
                 </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col h-full">
               <div className="relative overflow-hidden">
                 <img 
                   src="https://brennholz-koenig.de/api/cdn/products/1756679692645-sbgcne0s2nm.webp" 
@@ -402,7 +404,7 @@ export default function BrennholzPage() {
                 />
                 <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">-3%</div>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="mb-2">
                   <span className="inline-block bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium">Standard Buche</span>
                 </div>
@@ -419,6 +421,7 @@ export default function BrennholzPage() {
                     <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Kammergetrocknet 6%-8%</span>
                   </div>
                 </div>
+                <div className="mt-auto">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2">
                     <span className="text-lg text-gray-400 line-through">€93.00</span>
@@ -436,10 +439,11 @@ export default function BrennholzPage() {
                     Details ansehen
                   </a>
                 </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col h-full">
               <div className="relative overflow-hidden">
                 <img 
                   src="https://brennholz-koenig.de/api/cdn/products/1757544567853-04unx063w47j.webp" 
@@ -448,7 +452,7 @@ export default function BrennholzPage() {
                 />
                 <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">-16%</div>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="mb-2">
                   <span className="inline-block bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium">Scheitholz</span>
                 </div>
@@ -465,6 +469,7 @@ export default function BrennholzPage() {
                     <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Gespalten</span>
                   </div>
                 </div>
+                <div className="mt-auto">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2">
                     <span className="text-lg text-gray-400 line-through">€119.00</span>
@@ -482,10 +487,11 @@ export default function BrennholzPage() {
                     Details ansehen
                   </a>
                 </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col h-full">
               <div className="relative overflow-hidden">
                 <img 
                   src="https://brennholz-koenig.de/api/cdn/products/1756684793283-p8i93dnz33.webp" 
@@ -493,7 +499,7 @@ export default function BrennholzPage() {
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="mb-2">
                   <span className="inline-block bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium uppercase">Scheitholz</span>
                 </div>
@@ -510,6 +516,7 @@ export default function BrennholzPage() {
                     <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Für kleinere Öfen</span>
                   </div>
                 </div>
+                <div className="mt-auto">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2">
                     <span className="text-2xl font-bold text-orange-600">€105.00</span>
@@ -526,10 +533,11 @@ export default function BrennholzPage() {
                     Details ansehen
                   </a>
                 </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col h-full">
               <div className="relative overflow-hidden">
                 <img 
                   src="https://brennholz-koenig.de/api/cdn/products/1756684168611-vj131x8ol8k.webp" 
@@ -537,7 +545,7 @@ export default function BrennholzPage() {
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="mb-2">
                   <span className="inline-block bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium uppercase">Nadelholz</span>
                 </div>
@@ -554,6 +562,7 @@ export default function BrennholzPage() {
                     <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Schnell brennend</span>
                   </div>
                 </div>
+                <div className="mt-auto">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2">
                     <span className="text-2xl font-bold text-orange-600">€75.00</span>
@@ -569,6 +578,7 @@ export default function BrennholzPage() {
                   >
                     Details ansehen
                   </a>
+                </div>
                 </div>
               </div>
             </div>
