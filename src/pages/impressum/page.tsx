@@ -90,6 +90,14 @@ export default function ImpressumPage() {
           </section>
 
           <section className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Umsatzsteuer-ID</h2>
+            <p className="text-gray-700 leading-relaxed">
+              Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
+              <strong>DE200789994</strong>
+            </p>
+          </section>
+
+          <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
             <p className="text-gray-700 leading-relaxed">
               Thorsten Vey<br />
