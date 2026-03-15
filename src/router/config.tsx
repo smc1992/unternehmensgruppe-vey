@@ -14,6 +14,7 @@ import UmzuegePage from '../pages/umzuege/page';
 import TransportePage from '../pages/transporte/page';
 import ImpressumPage from '../pages/impressum/page';
 import DatenschutzPage from '../pages/datenschutz/page';
+import BarrierefreiheitPage from '../pages/barrierefreiheit/page';
 import NotFoundPage from '../pages/NotFound';
 
 const routes: RouteObject[] = [
@@ -72,6 +73,10 @@ const routes: RouteObject[] = [
   {
     path: '/datenschutz',
     element: <DatenschutzPage />,
+  },
+  {
+    path: '/barrierefreiheit',
+    element: <BarrierefreiheitPage />,
   },
   {
     path: '*',

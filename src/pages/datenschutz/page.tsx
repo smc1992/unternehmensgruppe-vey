@@ -205,6 +205,17 @@ export default function DatenschutzPage() {
             <p className="text-gray-700 leading-relaxed mb-4">
               Die von Ihnen an uns per Kontaktanfragen übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen – insbesondere gesetzliche Aufbewahrungsfristen – bleiben unberührt.
             </p>
+
+            <h3 className="text-xl font-bold text-gray-900 mb-3 mt-6">Cookies und Local Storage (TDDDG)</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Unsere Website verwendet sogenannte „Cookies“ oder vergleichbare Technologien, wie den „Local Storage“ Ihres Browsers. Dies sind kleine Textdateien oder Speicherbereiche, die auf Ihrem Endgerät abgelegt werden. Sie richten keinen Schaden an und enthalten keine Viren.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Einige dieser Technologien sind technisch notwendig (z.B. für die Speicherung Ihrer Datenschutz- und Cookie-Einstellungen). Die Speicherung dieser unbedingt erforderlichen Informationen erfolgt auf Grundlage von § 25 Abs. 2 TDDDG (Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz) in Verbindung mit Art. 6 Abs. 1 lit. f DSGVO.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Andere Technologien (z.B. für Marketing oder Analyse) werden nur dann gesetzt, wenn Sie im Cookie-Banner ausdrücklich eingewilligt haben. Diese Speicherung und Auswertung beruht auf § 25 Abs. 1 TDDDG sowie Art. 6 Abs. 1 lit. a DSGVO. Sie können Ihre getroffene Entscheidung und Einwilligung jederzeit über die Cookie-Einstellungen am Seitenende (falls angeboten) oder durch das Löschen Ihrer Browserdaten widerrufen.
+            </p>
           </section>
 
           <section className="mb-8">
@@ -288,6 +299,7 @@ export default function DatenschutzPage() {
             <div className="flex space-x-6 text-sm">
               <Link to="/impressum" className="text-gray-300 hover:text-white transition-colors">Impressum</Link>
               <Link to="/datenschutz" className="text-gray-300 hover:text-white transition-colors">Datenschutz</Link>
+              <Link to="/barrierefreiheit" className="text-gray-300 hover:text-white transition-colors">Barrierefreiheit</Link>
             </div>
           </div>
         </div>

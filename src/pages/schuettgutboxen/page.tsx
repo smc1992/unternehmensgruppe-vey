@@ -467,6 +467,7 @@ export default function SchuettgutboxenPage() {
             <div className="flex space-x-6 text-sm">
               <Link to="/impressum" className="text-gray-300 hover:text-white transition-colors">Impressum</Link>
               <Link to="/datenschutz" className="text-gray-300 hover:text-white transition-colors">Datenschutz</Link>
+              <Link to="/barrierefreiheit" className="text-gray-300 hover:text-white transition-colors">Barrierefreiheit</Link>
             </div>
           </div>
         </div>
