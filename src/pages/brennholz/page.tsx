@@ -389,14 +389,6 @@ export default function BrennholzPage() {
                   >
                     Details ansehen
                   </a>
-                  <a 
-                    href="https://brennholz-koenig.de/shop"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-3 rounded-lg font-semibold transition-colors bg-green-500 text-white hover:bg-green-600 cursor-pointer"
-                  >
-                    <i className="ri-shopping-cart-line text-lg"></i>
-                  </a>
                 </div>
               </div>
             </div>
@@ -443,14 +435,6 @@ export default function BrennholzPage() {
                   >
                     Details ansehen
                   </a>
-                  <a 
-                    href="https://brennholz-koenig.de/shop"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-3 rounded-lg font-semibold transition-colors bg-green-500 text-white hover:bg-green-600 cursor-pointer"
-                  >
-                    <i className="ri-shopping-cart-line text-lg"></i>
-                  </a>
                 </div>
               </div>
             </div>
@@ -496,14 +480,6 @@ export default function BrennholzPage() {
                     className="flex-1 bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center whitespace-nowrap cursor-pointer"
                   >
                     Details ansehen
-                  </a>
-                  <a 
-                    href="https://brennholz-koenig.de/shop"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-3 rounded-lg font-semibold transition-colors bg-green-500 text-white hover:bg-green-600 cursor-pointer"
-                  >
-                    <i className="ri-shopping-cart-line text-lg"></i>
                   </a>
                 </div>
               </div>
