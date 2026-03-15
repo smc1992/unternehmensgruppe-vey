@@ -9,94 +9,81 @@ export default function SchuettgutboxenPage() {
     window.scrollTo(0, 0);
     
     // SEO Meta Tags
-    document.title = "Lagerboxen & Schüttgutboxen Buttlar | Vey Unternehmensgruppe | Container mieten";
+    document.title = "Schüttgutboxen & Betonblöcke Buttlar | Vey Unternehmensgruppe | Lego-Steine";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Lagerboxen und Schüttgutboxen in Buttlar mieten. Flexible Container für Bau, Garten und Umzug. Verschiedene Größen verfügbar. Jetzt unverbindlich anfragen!');
+      metaDescription.setAttribute('content', 'Lagerboxen, Schüttgutboxen und Trennwandsysteme aus Beton-Stapelblöcken (Lego-Steine) in Buttlar. Flexibel, stabil und ohne Fundament aufbaubar.');
     }
 
     const metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
-      metaKeywords.setAttribute('content', 'Lagerboxen, Schüttgutboxen, Container mieten, Baucontainer, Buttlar, Vey Unternehmensgruppe');
+      metaKeywords.setAttribute('content', 'Schüttgutboxen, Betonblöcke, Lego Steine, Beton Stapelblöcke, Trennwandsysteme, Buttlar, Vey Unternehmensgruppe');
     }
   }, []);
 
   const boxTypes = [
     {
-      title: "Holz-Lagerbox Klein",
-      size: "1,5 m³",
-      dimensions: "150 x 100 x 100 cm",
-      price: "ab 45€/Monat",
+      title: "Beton-Stapelblock Klein",
+      size: "0,4 m³",
+      dimensions: "80 x 80 x 80 cm",
+      price: "Auf Anfrage",
       features: [
-        "Ideal für Brennholz",
-        "Wetterfest und stabil",
-        "Einfache Beladung",
-        "Stapelbar"
+        "Typ 'Lego-Stein' Halbe Länge",
+        "Einfaches Stecksystem",
+        "Kein Fundament nötig",
+        "Jederzeit erweiterbar"
       ],
       image: "/images/box-klein.jpg"
     },
     {
-      title: "Holz-Lagerbox Mittel",
-      size: "3 m³",
-      dimensions: "200 x 150 x 100 cm",
-      price: "ab 65€/Monat",
+      title: "Beton-Stapelblock Standard",
+      size: "0,8 m³",
+      dimensions: "160 x 80 x 80 cm",
+      price: "Auf Anfrage",
       features: [
-        "Perfekt für Haushalte",
-        "Große Kapazität",
-        "Robuste Konstruktion",
-        "Lange Lebensdauer"
+        "Klassisches Modulmaß",
+        "Extrem hohe Stabilität",
+        "Perfekt für Schüttgut",
+        "Schneller Aufbau"
       ],
       image: "/images/box-mittel.jpg"
     },
     {
-      title: "Holz-Lagerbox Groß",
-      size: "5 m³",
-      dimensions: "250 x 200 x 100 cm",
-      price: "ab 85€/Monat",
+      title: "Schüttgutbox Komplettsystem",
+      size: "Individuell",
+      dimensions: "Variabel",
+      price: "Auf Anfrage",
       features: [
-        "Für große Mengen",
-        "Gewerbliche Nutzung",
-        "Maximale Stabilität",
+        "U- oder L-Form Aufbauten",
+        "Massive Trennwandsysteme",
+        "Für Gewerbe & Landwirtschaft",
         "Gabelstapler-geeignet"
       ],
       image: "/images/box-gross.jpg"
-    },
-    {
-      title: "Universal-Schüttgutbox",
-      size: "2-4 m³",
-      dimensions: "Variabel",
-      price: "ab 55€/Monat",
-      features: [
-        "Vielseitig einsetzbar",
-        "Für verschiedene Materialien",
-        "Flexible Größen",
-        "Kippmechanismus optional"
-      ],
-      image: "/images/box-universal.jpg"
     }
   ];
 
   const applications = [
     {
-      title: "Brennholz-Lagerung",
-      description: "Perfekt für die trockene und übersichtliche Lagerung von Brennholz. Schützt vor Feuchtigkeit und Witterung.",
-      icon: "ri-fire-line"
-    },
-    {
-      title: "Baumaterial",
-      description: "Ideal für die Aufbewahrung von Baumaterialien wie Kies, Sand oder Schotter auf Baustellen.",
+      title: "Baustoffe & Schüttgut",
+      description: "Perfekt für die getrennte Lagerung von Sand, Kies, Split, Erde oder Schotter auf dem Bauhof.",
       icon: "ri-building-line"
     },
     {
-      title: "Gartenabfälle",
-      description: "Praktisch für die Sammlung von Grünschnitt, Ästen und anderen Gartenabfällen.",
-      icon: "ri-leaf-line"
+      title: "Landwirtschaft",
+      description: "Ideal zum Errichten von Fahrsilos, Mistanlagen oder zur Lagerung von Getreide und Futtermitteln.",
+      icon: "ri-plant-line"
     },
     {
-      title: "Recycling-Material",
-      description: "Geeignet für die getrennte Lagerung von Recycling-Materialien und Wertstoffen.",
+      title: "Recycling & Entsorgung",
+      description: "Praktisch für die Sortierung von Bauschutt, Altglas, Metallen und anderen Wertstoffen.",
       icon: "ri-recycle-line"
+    },
+    {
+      title: "Hangabfangung & Schutz",
+      description: "Auch nutzbar als flexible Stützmauer, Sichtschutz oder Anfahrschutz auf Gewerbehöfen.",
+      icon: "ri-shield-line"
     }
   ];
 
@@ -160,17 +147,16 @@ export default function SchuettgutboxenPage() {
       <section 
         className="relative min-h-[70vh] flex items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('/images/hero-schuettgut.jpg')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('/images/abbruch1.jpg')`
         }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-              Lager- und <span className="text-orange-500">Schüttgutboxen</span> zur Miete
+              Flexible <span className="text-orange-500">Schüttgutboxen</span> aus Betonblöcken
             </h1>
             <p className="text-xl sm:text-2xl mb-8 text-gray-200 leading-relaxed">
-              Robuste und wetterfeste Boxen für Brennholz, Baumaterialien und mehr. 
-              Flexible Mietdauer und verschiedene Größen verfügbar.
+              Massive Trennwandsysteme nach dem Lego-Prinzip. Ideal für Baustoffe, Recyclingmaterial, Landwirtschaft oder als Stützwände.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
@@ -195,51 +181,51 @@ export default function SchuettgutboxenPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-6">
-              Vorteile unserer <span className="text-orange-600">Schüttgutboxen</span>
+              Vorteile unserer <span className="text-orange-600">Beton-Lagerboxen</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Praktische und langlebige Lösungen für Ihre Lagerbedürfnisse
+              Höchste Stabilität kombiniert mit grenzenloser Flexibilität
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="ri-shield-check-line text-white text-2xl"></i>
+                <i className="ri-layout-grid-fill text-white text-2xl"></i>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Wetterfest</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Modular & Flexibel</h3>
               <p className="text-gray-600">
-                Robuste Konstruktion schützt Ihr Lagergut vor Regen, Schnee und Feuchtigkeit.
+                Wie bei Lego-Steinen: Jederzeit erweiterbar, umbaubar oder komplett versetzbar.
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="ri-calendar-line text-white text-2xl"></i>
+                <i className="ri-hammer-line text-white text-2xl"></i>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Flexible Mietdauer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Kein Fundament nötig</h3>
               <p className="text-gray-600">
-                Mieten Sie für Tage, Wochen oder Monate – ganz nach Ihrem Bedarf.
+                Ein tragfähiger, ebener Untergrund reicht für den Aufbau völlig aus.
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="ri-truck-line text-white text-2xl"></i>
+                <i className="ri-shield-star-line text-white text-2xl"></i>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Lieferung inklusive</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Extrem belastbar</h3>
               <p className="text-gray-600">
-                Wir liefern die Box direkt zu Ihnen und holen sie wieder ab.
+                Massivbeton widersteht dem harten Rangierbetrieb von Radladern und Baggern problemlos.
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="ri-tools-line text-white text-2xl"></i>
+                <i className="ri-time-line text-white text-2xl"></i>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Robust &amp; Stabil</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Schneller Aufbau</h3>
               <p className="text-gray-600">
-                Hochwertige Materialien garantieren lange Lebensdauer und Stabilität.
+                In kürzester Zeit aufgestellt und sofort bereit für die Schüttgutlagerung.
               </p>
             </div>
           </div>
@@ -333,7 +319,7 @@ export default function SchuettgutboxenPage() {
               So einfach <span className="text-orange-600">funktioniert's</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              In nur 4 Schritten zu Ihrer Lagerbox
+              In nur 4 Schritten zu Ihrem Betonblock-System
             </p>
           </div>
 
@@ -344,7 +330,7 @@ export default function SchuettgutboxenPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Anfrage stellen</h3>
               <p className="text-gray-600">
-                Kontaktieren Sie uns telefonisch oder über unser Kontaktformular.
+                Kontaktieren Sie uns mit Ihren Anforderungen zur Mengen- und Formplanung.
               </p>
             </div>
 
@@ -354,7 +340,7 @@ export default function SchuettgutboxenPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Beratung</h3>
               <p className="text-gray-600">
-                Wir beraten Sie zur passenden Boxgröße und Mietdauer.
+                Wir beraten Sie zur passenden Menge, Statik und Aufbau-Ausführung.
               </p>
             </div>
 
@@ -364,7 +350,7 @@ export default function SchuettgutboxenPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Lieferung</h3>
               <p className="text-gray-600">
-                Wir liefern die Box zum vereinbarten Termin zu Ihnen.
+                Wir liefern die Blöcke zum vereinbarten Termin und stellen sie auf.
               </p>
             </div>
 
@@ -374,7 +360,7 @@ export default function SchuettgutboxenPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Abholung</h3>
               <p className="text-gray-600">
-                Nach der Mietdauer holen wir die Box wieder ab.
+                Nach der Nutzung holen wir die Blöcke bei Bedarf einfach wieder ab.
               </p>
             </div>
           </div>
@@ -385,11 +371,11 @@ export default function SchuettgutboxenPage() {
       <section className="py-20 bg-orange-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-black text-white mb-6">
-            Benötigen Sie eine Lagerbox?
+            Benötigen Sie Schüttgutboxen?
           </h2>
           <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
             Kontaktieren Sie uns für ein unverbindliches Angebot. 
-            Wir beraten Sie gerne zur passenden Lösung für Ihre Bedürfnisse.
+            Wir planen gerne mit Ihnen das passgenaue Betonblock-System.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link 
