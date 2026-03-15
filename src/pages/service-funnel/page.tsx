@@ -205,12 +205,12 @@ const ServiceFunnelPage = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-medium text-gray-600">Schritt {currentStep} von 5</span>
-            <span className="text-sm text-gray-500">{Math.round((currentStep / 5) * 100)}% abgeschlossen</span>
+            <span className="text-sm text-gray-500">{Math.min(100, Math.round((currentStep / 5) * 100))}% abgeschlossen</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
               className="bg-orange-600 h-2 rounded-full transition-all duration-500 ease-out"
-              style={{ width: `${(currentStep / 5) * 100}%` }}
+              style={{ width: `${Math.min(100, (currentStep / 5) * 100)}%` }}
             ></div>
           </div>
         </div>
