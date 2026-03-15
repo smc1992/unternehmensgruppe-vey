@@ -470,7 +470,7 @@ const ServiceFunnelPage = () => {
                 Vielen Dank für Ihre Anfrage!
               </h1>
               <p className="text-lg text-gray-600 mb-8">
-                Wir haben Ihre Anfrage erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.
+                Wir haben Ihre Anfrage erhalten und werden uns bei Ihnen melden.
               </p>
               
               <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 mb-8 max-w-2xl mx-auto">
