@@ -271,227 +271,236 @@ export default function HomePage() {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Brennholz */}
             <StaggerItem>
-              <motion.div 
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-                <div className="h-48 bg-cover bg-center" style={{
-                  backgroundImage: `url('/images/brennholz1.jpg')`
-                }}></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Brennholz</h3>
-                  <p className="text-gray-600 mb-4">
-                    Hochwertiges, trockenes Brennholz verschiedener Holzarten. Perfekt für Kamin, Ofen und Feuerstelle.
-                  </p>
-                  <Link 
-                    to="/brennholz"
-                    className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
-                  >
-                    <span>Mehr erfahren</span>
-                    <i className="ri-arrow-right-line ml-2"></i>
-                  </Link>
-                </div>
-              </motion.div>
+              <Link to="/brennholz" className="block focus:outline-none">
+                <motion.div 
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full"
+                  whileHover={{ y: -10, scale: 1.02 }}
+                >
+                  <div className="h-48 bg-cover bg-center" style={{
+                    backgroundImage: `url('/images/brennholz1.jpg')`
+                  }}></div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Brennholz</h3>
+                    <p className="text-gray-600 mb-4">
+                      Hochwertiges, trockenes Brennholz verschiedener Holzarten. Perfekt für Kamin, Ofen und Feuerstelle.
+                    </p>
+                    <span 
+                      className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
+                    >
+                      <span>Mehr erfahren</span>
+                      <i className="ri-arrow-right-line ml-2"></i>
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             </StaggerItem>
 
             {/* Baumfällarbeiten */}
             <StaggerItem>
-              <motion.div 
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-                <div className="h-48 bg-cover bg-center" style={{
-                  backgroundImage: `url('/images/baumfaellung1.jpg')`
-                }}></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Baumfällarbeiten</h3>
-                  <p className="text-gray-600 mb-4">
-                    Professionelle Baumfällung und Baumpflege durch erfahrene Fachkräfte mit modernster Ausrüstung.
-                  </p>
-                  <Link 
-                    to="/baumfaellarbeiten"
-                    className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
-                  >
-                    <span>Mehr erfahren</span>
-                    <i className="ri-arrow-right-line ml-2"></i>
-                  </Link>
-                </div>
-              </motion.div>
+              <Link to="/baumfaellarbeiten" className="block focus:outline-none">
+                <motion.div 
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full"
+                  whileHover={{ y: -10, scale: 1.02 }}
+                >
+                  <div className="h-48 bg-cover bg-center" style={{
+                    backgroundImage: `url('/images/baumfaellung1.jpg')`
+                  }}></div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Baumfällarbeiten</h3>
+                    <p className="text-gray-600 mb-4">
+                      Professionelle Baumfällung und Baumpflege durch erfahrene Fachkräfte mit modernster Ausrüstung.
+                    </p>
+                    <span 
+                      className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
+                    >
+                      <span>Mehr erfahren</span>
+                      <i className="ri-arrow-right-line ml-2"></i>
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             </StaggerItem>
 
             {/* Mulcharbeiten */}
             <StaggerItem>
-              <motion.div 
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-                <div className="h-48 bg-cover bg-center" style={{
-                  backgroundImage: `url('/images/mulch1.jpg')`
-                }}></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Mulcharbeiten</h3>
-                  <p className="text-gray-600 mb-4">
-                    Gartenpflege und Mulcharbeiten für einen gepflegten und gesunden Garten das ganze Jahr über.
-                  </p>
-                  <Link 
-                    to="/mulcharbeiten"
-                    className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
-                  >
-                    <span>Mehr erfahren</span>
-                    <i className="ri-arrow-right-line ml-2"></i>
-                  </Link>
-                </div>
-              </motion.div>
+              <Link to="/mulcharbeiten" className="block focus:outline-none">
+                <motion.div 
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full"
+                  whileHover={{ y: -10, scale: 1.02 }}
+                >
+                  <div className="h-48 bg-cover bg-center" style={{
+                    backgroundImage: `url('/images/mulch1.jpg')`
+                  }}></div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Mulcharbeiten</h3>
+                    <p className="text-gray-600 mb-4">
+                      Gartenpflege und Mulcharbeiten für einen gepflegten und gesunden Garten das ganze Jahr über.
+                    </p>
+                    <span 
+                      className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
+                    >
+                      <span>Mehr erfahren</span>
+                      <i className="ri-arrow-right-line ml-2"></i>
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             </StaggerItem>
 
             {/* Abbrucharbeiten */}
             <StaggerItem>
-              <motion.div 
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-                <div className="h-48 bg-cover bg-center" style={{
-                  backgroundImage: `url('/images/abbruch1.jpg')`
-                }}></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Abbrucharbeiten</h3>
-                  <p className="text-gray-600 mb-4">
-                    Sichere und fachgerechte Abbrucharbeiten für Gebäude und Bauwerke aller Art.
-                  </p>
-                  <Link 
-                    to="/abbrucharbeiten"
-                    className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
-                  >
-                    <span>Mehr erfahren</span>
-                    <i className="ri-arrow-right-line ml-2"></i>
-                  </Link>
-                </div>
-              </motion.div>
+              <Link to="/abbrucharbeiten" className="block focus:outline-none">
+                <motion.div 
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full"
+                  whileHover={{ y: -10, scale: 1.02 }}
+                >
+                  <div className="h-48 bg-cover bg-center" style={{
+                    backgroundImage: `url('/images/abbruch1.jpg')`
+                  }}></div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Abbrucharbeiten</h3>
+                    <p className="text-gray-600 mb-4">
+                      Sichere und fachgerechte Abbrucharbeiten für Gebäude und Bauwerke aller Art.
+                    </p>
+                    <span 
+                      className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
+                    >
+                      <span>Mehr erfahren</span>
+                      <i className="ri-arrow-right-line ml-2"></i>
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             </StaggerItem>
 
             {/* Malerarbeiten */}
             <StaggerItem>
-              <motion.div 
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-                <div className="h-48 bg-cover bg-center" style={{
-                  backgroundImage: `url('/images/maler1.jpg')`
-                }}></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Malerarbeiten</h3>
-                  <p className="text-gray-600 mb-4">
-                    Innen- und Außenmalerarbeiten in höchster Qualität für Wohn- und Geschäftsräume.
-                  </p>
-                  <Link 
-                    to="/malerarbeiten"
-                    className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
-                  >
-                    <span>Mehr erfahren</span>
-                    <i className="ri-arrow-right-line ml-2"></i>
-                  </Link>
-                </div>
-              </motion.div>
+              <Link to="/malerarbeiten" className="block focus:outline-none">
+                <motion.div 
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full"
+                  whileHover={{ y: -10, scale: 1.02 }}
+                >
+                  <div className="h-48 bg-cover bg-center" style={{
+                    backgroundImage: `url('/images/maler1.jpg')`
+                  }}></div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Malerarbeiten</h3>
+                    <p className="text-gray-600 mb-4">
+                      Innen- und Außenmalerarbeiten in höchster Qualität für Wohn- und Geschäftsräume.
+                    </p>
+                    <span 
+                      className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
+                    >
+                      <span>Mehr erfahren</span>
+                      <i className="ri-arrow-right-line ml-2"></i>
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             </StaggerItem>
 
             {/* Dachdeckerarbeiten */}
             <StaggerItem>
-              <motion.div 
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-                <div className="h-48 bg-cover bg-center" style={{
-                  backgroundImage: `url('/images/dach1.jpg')`
-                }}></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Dachdeckerarbeiten</h3>
-                  <p className="text-gray-600 mb-4">
-                    Dachsanierung, Reparaturen und Neueindeckungen durch erfahrene Dachdecker.
-                  </p>
-                  <Link 
-                    to="/dachdeckerarbeiten"
-                    className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
-                  >
-                    <span>Mehr erfahren</span>
-                    <i className="ri-arrow-right-line ml-2"></i>
-                  </Link>
-                </div>
-              </motion.div>
+              <Link to="/dachdeckerarbeiten" className="block focus:outline-none">
+                <motion.div 
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full"
+                  whileHover={{ y: -10, scale: 1.02 }}
+                >
+                  <div className="h-48 bg-cover bg-center" style={{
+                    backgroundImage: `url('/images/dach1.jpg')`
+                  }}></div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Dachdeckerarbeiten</h3>
+                    <p className="text-gray-600 mb-4">
+                      Dachsanierung, Reparaturen und Neueindeckungen durch erfahrene Dachdecker.
+                    </p>
+                    <span 
+                      className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
+                    >
+                      <span>Mehr erfahren</span>
+                      <i className="ri-arrow-right-line ml-2"></i>
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             </StaggerItem>
 
             {/* Lagerboxen */}
             <StaggerItem>
-              <motion.div 
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-                <div className="h-48 bg-cover bg-center" style={{
-                  backgroundImage: `url('/images/lager1.jpg')`
-                }}></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Lagerboxen, Schüttgutboxen</h3>
-                  <p className="text-gray-600 mb-4">
-                    Flexible Lagerboxen und Schüttgutboxen zur Miete für Ihre temporären Lagerbedürfnisse.
-                  </p>
-                  <Link 
-                    to="/schuettgutboxen"
-                    className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
-                  >
-                    <span>Mehr erfahren</span>
-                    <i className="ri-arrow-right-line ml-2"></i>
-                  </Link>
-                </div>
-              </motion.div>
+              <Link to="/schuettgutboxen" className="block focus:outline-none">
+                <motion.div 
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full"
+                  whileHover={{ y: -10, scale: 1.02 }}
+                >
+                  <div className="h-48 bg-cover bg-center" style={{
+                    backgroundImage: `url('/images/lager1.jpg')`
+                  }}></div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Lagerboxen, Schüttgutboxen</h3>
+                    <p className="text-gray-600 mb-4">
+                      Flexible Lagerboxen und Schüttgutboxen zur Miete für Ihre temporären Lagerbedürfnisse.
+                    </p>
+                    <span 
+                      className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
+                    >
+                      <span>Mehr erfahren</span>
+                      <i className="ri-arrow-right-line ml-2"></i>
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             </StaggerItem>
 
             {/* Umzüge */}
             <StaggerItem>
-              <motion.div 
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-                <div className="h-48 bg-cover bg-center" style={{
-                  backgroundImage: `url('/images/umzuege1.jpg')`
-                }}></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Umzüge</h3>
-                  <p className="text-gray-600 mb-4">
-                    Professionelle Umzugsdienstleistungen für Privat und Gewerbe. Stressfrei und zuverlässig.
-                  </p>
-                  <Link 
-                    to="/umzuege"
-                    className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
-                  >
-                    <span>Mehr erfahren</span>
-                    <i className="ri-arrow-right-line ml-2"></i>
-                  </Link>
-                </div>
-              </motion.div>
+              <Link to="/umzuege" className="block focus:outline-none">
+                <motion.div 
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full"
+                  whileHover={{ y: -10, scale: 1.02 }}
+                >
+                  <div className="h-48 bg-cover bg-center" style={{
+                    backgroundImage: `url('/images/umzuege1.jpg')`
+                  }}></div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Umzüge</h3>
+                    <p className="text-gray-600 mb-4">
+                      Professionelle Umzugsdienstleistungen für Privat und Gewerbe. Stressfrei und zuverlässig.
+                    </p>
+                    <span 
+                      className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
+                    >
+                      <span>Mehr erfahren</span>
+                      <i className="ri-arrow-right-line ml-2"></i>
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             </StaggerItem>
 
             {/* Transporte */}
             <StaggerItem>
-              <motion.div 
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-                <div className="h-48 bg-cover bg-center" style={{
-                  backgroundImage: `url('/images/transport1.jpg')`
-                }}></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Transporte</h3>
-                  <p className="text-gray-600 mb-4">
-                    Professionelle Transportlösungen für alle Ihre Bedürfnisse. Von Möbeltransport bis Schwertransport.
-                  </p>
-                  <Link 
-                    to="/transporte"
-                    className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
-                  >
-                    <span>Mehr erfahren</span>
-                    <i className="ri-arrow-right-line ml-2"></i>
-                  </Link>
-                </div>
-              </motion.div>
+              <Link to="/transporte" className="block focus:outline-none">
+                <motion.div 
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full"
+                  whileHover={{ y: -10, scale: 1.02 }}
+                >
+                  <div className="h-48 bg-cover bg-center" style={{
+                    backgroundImage: `url('/images/transport1.jpg')`
+                  }}></div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Transporte</h3>
+                    <p className="text-gray-600 mb-4">
+                      Professionelle Transportlösungen für alle Ihre Bedürfnisse. Von Möbeltransport bis Schwertransport.
+                    </p>
+                    <span 
+                      className="inline-flex items-center bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors whitespace-nowrap cursor-pointer"
+                    >
+                      <span>Mehr erfahren</span>
+                      <i className="ri-arrow-right-line ml-2"></i>
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             </StaggerItem>
           </StaggerContainer>
         </div>
