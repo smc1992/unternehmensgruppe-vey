@@ -41,7 +41,7 @@ export default function BrennholzPage() {
         "@type": "LocalBusiness",
         "name": "Vey Unternehmensgruppe",
         "telephone": "+4917671085234",
-        "email": "info@brennholz-koenig.de",
+        "email": "info@unternehmensgruppe-vey.de",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Frankfurter Straße 3",
@@ -756,7 +756,7 @@ export default function BrennholzPage() {
               Jetzt anrufen
             </a>
             <a 
-              href="/#contact"
+              href="mailto:info@unternehmensgruppe-vey.de"
               className="inline-flex items-center justify-center border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg hover:bg-white hover:text-orange-600 transition-colors whitespace-nowrap"
             >
               <i className="ri-mail-line mr-2 sm:mr-3"></i>
@@ -787,7 +787,7 @@ export default function BrennholzPage() {
                 <a href="tel:+4917671085234" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-phone-line"></i>
                 </a>
-                <a href="mailto:info@brennholz-koenig.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
+                <a href="mailto:info@unternehmensgruppe-vey.de" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors">
                   <i className="ri-mail-line"></i>
                 </a>
               </div>
@@ -830,7 +830,7 @@ export default function BrennholzPage() {
                 <p>36419 Buttlar</p>
                 <p>Deutschland</p>
                 <p>+49 176 71085234</p>
-                <p>info@brennholz-koenig.de</p>
+                <a href="mailto:info@unternehmensgruppe-vey.de" className="hover:text-white transition-colors block">info@unternehmensgruppe-vey.de</a>
               </div>
             </div>
           </div>
