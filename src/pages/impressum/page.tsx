@@ -160,11 +160,14 @@ export default function ImpressumPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <img 
-                src="/images/company-logo.png"
-                alt="Vey Unternehmensgruppe Logo"
-                className="h-10 w-auto mb-4"
-              />
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center">
+                  <i className="ri-hammer-line text-white text-lg"></i>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold">VEY Unternehmensgruppe</h3>
+                </div>
+              </div>
               <p className="text-gray-300 mb-4">
                 Ihr zuverlässiger Partner für vielseitige Dienstleistungen. 
                 Qualität und Kundenzufriedenheit seit über 15 Jahren.
@@ -187,23 +190,22 @@ export default function ImpressumPage() {
                 <li><Link to="/mulcharbeiten" className="hover:text-white transition-colors">Mulcharbeiten</Link></li>
                 <li><Link to="/abbrucharbeiten" className="hover:text-white transition-colors">Abbrucharbeiten</Link></li>
                 <li><Link to="/malerarbeiten" className="hover:text-white transition-colors">Malerarbeiten</Link></li>
-                <li><Link to="/dachdeckerarbeiten" className="hover:text-white transition-colors">Dachdeckerarbeiten</Link></li>
-                <li><Link to="/schuettgutboxen" className="hover:text-white transition-colors">Lagerboxen</Link></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-lg font-bold mb-4 text-orange-500">Unternehmen</h4>
+              <h4 className="text-lg font-bold mb-4 text-orange-500">&nbsp;</h4>
               <ul className="space-y-2 text-gray-300">
-                <li><Link to="/#about" className="hover:text-white transition-colors">Über uns</Link></li>
-                <li><Link to="/#contact" className="hover:text-white transition-colors">Kontakt</Link></li>
-                <li><a href="#" className="hover:text-white transition-colors">Referenzen</a></li>
+                <li><Link to="/dachdeckerarbeiten" className="hover:text-white transition-colors">Dachdeckerarbeiten</Link></li>
+                <li><Link to="/schuettgutboxen" className="hover:text-white transition-colors">Lagerboxen</Link></li>
+                <li><Link to="/umzuege" className="hover:text-white transition-colors">Umzüge</Link></li>
+                <li><Link to="/transporte" className="hover:text-white transition-colors">Transporte</Link></li>
               </ul>
-              <div className="mt-4">
+              <div className="mt-6">
                 <h5 className="text-sm font-semibold text-orange-400 mb-2">Öffnungszeiten</h5>
                 <div className="text-gray-300 text-sm space-y-1">
                   <p>Mo-Fr: 8:00-18:00 Uhr</p>
-                  <p>Sa: 9:00-16:00 Uhr</p>
+                  <p>Sa: 09:00-14:00 Uhr</p>
                   <p>So: Nach Vereinbarung</p>
                 </div>
               </div>
@@ -217,7 +219,7 @@ export default function ImpressumPage() {
                 <p>36419 Buttlar</p>
                 <p>Deutschland</p>
                 <p>+49 176 71085234</p>
-                <p>info@unternehmensgruppe-vey.de</p>
+                <a href="mailto:info@unternehmensgruppe-vey.de" className="hover:text-white transition-colors block">info@unternehmensgruppe-vey.de</a>
               </div>
             </div>
           </div>
@@ -227,8 +229,8 @@ export default function ImpressumPage() {
               © {new Date().getFullYear()} Vey Unternehmensgruppe. Alle Rechte vorbehalten.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="/impressum" className="text-gray-300 hover:text-white transition-colors">Impressum</a>
-              <a href="/datenschutz" className="text-gray-300 hover:text-white transition-colors">Datenschutz</a>
+              <Link to="/impressum" className="text-gray-300 hover:text-white transition-colors">Impressum</Link>
+              <Link to="/datenschutz" className="text-gray-300 hover:text-white transition-colors">Datenschutz</Link>
             </div>
           </div>
         </div>
